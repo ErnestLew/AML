@@ -61,7 +61,7 @@ def process_and_predict(model, uploaded_file, sequence_length=SEQUENCE_LENGTH):
 
     return final_prediction, results
 
-st.set_page_config(page_title='Fruit Classifier', page_icon='icons\icon.png', layout='centered')
+st.set_page_config(page_title='Video Classifier', page_icon='icons\icon.png', layout='centered')
 st.title("Video Classification App")
 st.write("This app classifies the actions in a video.")
 uploaded_file = st.file_uploader("Choose a video...", type=["mp4", "avi", "mov"])
