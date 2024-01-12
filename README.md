@@ -14,10 +14,10 @@ pip install -r requirements.txt
 ```
 
 # Download model
-```
+
 Kindly download the model in this [link](https://drive.google.com/file/d/1_kDA4OhC6RKh96YZUTYp1WwNU_ojAcUi/view?usp=sharing) and
 save in root file to run the program
-```
+
 
 # Run the streamlit program
 
