@@ -1,0 +1,2700 @@
+Current Hyperparameters: {'conv_filters': (16, 32, 64, 64), 'lstm_units': 32, 'dropout_rate': 0.4, 'learning_rate': 0.001}
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 238
+Total sequences in class 'nothing': 1189
+Total sequences in class 'moving_arms': 56
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 20
+Total sequences in class 'nothing': 865
+Total sequences in class 'moving_arms': 58
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ time_distributed (TimeDist  (None, 15, 64, 64, 16)    448       
+ ributed)                                                        
+                                                                 
+ time_distributed_1 (TimeDi  (None, 15, 16, 16, 16)    0         
+ stributed)                                                      
+                                                                 
+ time_distributed_2 (TimeDi  (None, 15, 16, 16, 16)    0         
+ stributed)                                                      
+                                                                 
+ time_distributed_3 (TimeDi  (None, 15, 16, 16, 32)    4640      
+ stributed)                                                      
+                                                                 
+ time_distributed_4 (TimeDi  (None, 15, 4, 4, 32)      0         
+ stributed)                                                      
+                                                                 
+ time_distributed_5 (TimeDi  (None, 15, 4, 4, 32)      0         
+ stributed)                                                      
+                                                                 
+ time_distributed_6 (TimeDi  (None, 15, 4, 4, 64)      18496     
+ stributed)                                                      
+                                                                 
+ time_distributed_7 (TimeDi  (None, 15, 2, 2, 64)      0         
+ stributed)                                                      
+                                                                 
+ time_distributed_8 (TimeDi  (None, 15, 2, 2, 64)      0         
+ stributed)                                                      
+                                                                 
+ time_distributed_9 (TimeDi  (None, 15, 2, 2, 64)      36928     
+ stributed)                                                      
+                                                                 
+ time_distributed_10 (TimeD  (None, 15, 1, 1, 64)      0         
+ istributed)                                                     
+                                                                 
+ time_distributed_11 (TimeD  (None, 15, 1, 1, 64)      0         
+ istributed)                                                     
+                                                                 
+ time_distributed_12 (TimeD  (None, 15, 64)            0         
+ istributed)                                                     
+                                                                 
+ lstm (LSTM)                 (None, 32)                12416     
+                                                                 
+ dense (Dense)               (None, 3)                 99        
+                                                                 
+=================================================================
+Total params: 73027 (285.26 KB)
+Trainable params: 73027 (285.26 KB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+Epoch 1/25
+57/57 [==============================] - 10s 78ms/step - loss: 1.0910 - accuracy: 0.3867 - val_loss: 1.0007 - val_accuracy: 0.6490
+Epoch 2/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.9288 - accuracy: 0.5256 - val_loss: 0.9949 - val_accuracy: 0.3839
+Epoch 3/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.7762 - accuracy: 0.6356 - val_loss: 0.7501 - val_accuracy: 0.8802
+Epoch 4/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.7284 - accuracy: 0.6722 - val_loss: 0.6251 - val_accuracy: 0.8993
+Epoch 5/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.6855 - accuracy: 0.6811 - val_loss: 0.7347 - val_accuracy: 0.7317
+Epoch 6/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.6308 - accuracy: 0.7122 - val_loss: 0.6570 - val_accuracy: 0.8749
+Epoch 7/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.6181 - accuracy: 0.7078 - val_loss: 0.8077 - val_accuracy: 0.5992
+Epoch 8/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.5671 - accuracy: 0.7356 - val_loss: 0.6141 - val_accuracy: 0.8537
+Epoch 9/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.5250 - accuracy: 0.7789 - val_loss: 0.5905 - val_accuracy: 0.8547
+Epoch 10/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.5143 - accuracy: 0.7644 - val_loss: 0.7451 - val_accuracy: 0.6840
+Epoch 11/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.4973 - accuracy: 0.7756 - val_loss: 1.0448 - val_accuracy: 0.4825
+Epoch 12/25
+57/57 [==============================] - 1s 24ms/step - loss: 0.4261 - accuracy: 0.8244 - val_loss: 0.4774 - val_accuracy: 0.8717
+Epoch 13/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.4143 - accuracy: 0.8311 - val_loss: 0.5768 - val_accuracy: 0.8664
+Epoch 14/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.3801 - accuracy: 0.8500 - val_loss: 0.7774 - val_accuracy: 0.7211
+Epoch 15/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.3857 - accuracy: 0.8411 - val_loss: 0.9366 - val_accuracy: 0.6151
+Epoch 16/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.3773 - accuracy: 0.8378 - val_loss: 1.0103 - val_accuracy: 0.4761
+Epoch 17/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.3868 - accuracy: 0.8433 - val_loss: 0.5011 - val_accuracy: 0.8759
+Epoch 18/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.3378 - accuracy: 0.8633 - val_loss: 0.9448 - val_accuracy: 0.6331
+Epoch 19/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.3370 - accuracy: 0.8822 - val_loss: 0.6210 - val_accuracy: 0.8293
+Epoch 20/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.3586 - accuracy: 0.8600 - val_loss: 0.9795 - val_accuracy: 0.6087
+Epoch 21/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.3016 - accuracy: 0.8889 - val_loss: 1.5667 - val_accuracy: 0.3383
+Epoch 22/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.3005 - accuracy: 0.8744 - val_loss: 1.1883 - val_accuracy: 0.5143
+Epoch 23/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.3203 - accuracy: 0.8778 - val_loss: 1.5132 - val_accuracy: 0.3181
+Epoch 24/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.2832 - accuracy: 0.8933 - val_loss: 1.8663 - val_accuracy: 0.2131
+Epoch 25/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.2941 - accuracy: 0.8811 - val_loss: 1.0432 - val_accuracy: 0.5514
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 212
+Total sequences in class 'nothing': 1291
+Total sequences in class 'moving_arms': 67
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 46
+Total sequences in class 'nothing': 763
+Total sequences in class 'moving_arms': 47
+Model: "sequential_1"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ time_distributed_13 (TimeD  (None, 15, 64, 64, 16)    448       
+ istributed)                                                     
+                                                                 
+ time_distributed_14 (TimeD  (None, 15, 16, 16, 16)    0         
+ istributed)                                                     
+                                                                 
+ time_distributed_15 (TimeD  (None, 15, 16, 16, 16)    0         
+ istributed)                                                     
+                                                                 
+ time_distributed_16 (TimeD  (None, 15, 16, 16, 32)    4640      
+ istributed)                                                     
+                                                                 
+ time_distributed_17 (TimeD  (None, 15, 4, 4, 32)      0         
+ istributed)                                                     
+                                                                 
+ time_distributed_18 (TimeD  (None, 15, 4, 4, 32)      0         
+ istributed)                                                     
+                                                                 
+ time_distributed_19 (TimeD  (None, 15, 4, 4, 64)      18496     
+ istributed)                                                     
+                                                                 
+ time_distributed_20 (TimeD  (None, 15, 2, 2, 64)      0         
+ istributed)                                                     
+                                                                 
+ time_distributed_21 (TimeD  (None, 15, 2, 2, 64)      0         
+ istributed)                                                     
+                                                                 
+ time_distributed_22 (TimeD  (None, 15, 2, 2, 64)      36928     
+ istributed)                                                     
+                                                                 
+ time_distributed_23 (TimeD  (None, 15, 1, 1, 64)      0         
+ istributed)                                                     
+                                                                 
+ time_distributed_24 (TimeD  (None, 15, 1, 1, 64)      0         
+ istributed)                                                     
+                                                                 
+ time_distributed_25 (TimeD  (None, 15, 64)            0         
+ istributed)                                                     
+                                                                 
+ lstm_1 (LSTM)               (None, 32)                12416     
+                                                                 
+ dense_1 (Dense)             (None, 3)                 99        
+                                                                 
+=================================================================
+Total params: 73027 (285.26 KB)
+Trainable params: 73027 (285.26 KB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+Epoch 1/25
+57/57 [==============================] - 7s 66ms/step - loss: 1.0463 - accuracy: 0.4056 - val_loss: 1.0557 - val_accuracy: 0.4217
+Epoch 2/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.9083 - accuracy: 0.5211 - val_loss: 1.1709 - val_accuracy: 0.1682
+Epoch 3/25
+57/57 [==============================] - 1s 21ms/step - loss: 0.7543 - accuracy: 0.6289 - val_loss: 1.3509 - val_accuracy: 0.1449
+Epoch 4/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.6615 - accuracy: 0.7067 - val_loss: 1.3207 - val_accuracy: 0.1215
+Epoch 5/25
+57/57 [==============================] - 1s 21ms/step - loss: 0.5887 - accuracy: 0.7500 - val_loss: 1.2860 - val_accuracy: 0.1776
+Epoch 6/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.5512 - accuracy: 0.7611 - val_loss: 1.4188 - val_accuracy: 0.1379
+Epoch 7/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.4864 - accuracy: 0.8233 - val_loss: 1.5077 - val_accuracy: 0.1577
+Epoch 8/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.4296 - accuracy: 0.8322 - val_loss: 1.3456 - val_accuracy: 0.2500
+Epoch 9/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.4089 - accuracy: 0.8400 - val_loss: 1.3908 - val_accuracy: 0.2231
+Epoch 10/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.3799 - accuracy: 0.8533 - val_loss: 2.0242 - val_accuracy: 0.0759
+Epoch 11/25
+57/57 [==============================] - 1s 21ms/step - loss: 0.3593 - accuracy: 0.8667 - val_loss: 1.9604 - val_accuracy: 0.2231
+Epoch 12/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.3103 - accuracy: 0.8822 - val_loss: 2.0555 - val_accuracy: 0.1227
+Epoch 13/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.2812 - accuracy: 0.9000 - val_loss: 1.8641 - val_accuracy: 0.1367
+Epoch 14/25
+57/57 [==============================] - 1s 21ms/step - loss: 0.2998 - accuracy: 0.8911 - val_loss: 2.4777 - val_accuracy: 0.1040
+Epoch 15/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.2538 - accuracy: 0.9178 - val_loss: 1.9851 - val_accuracy: 0.1694
+Epoch 16/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.2567 - accuracy: 0.9122 - val_loss: 1.7535 - val_accuracy: 0.1963
+Epoch 17/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.2437 - accuracy: 0.9133 - val_loss: 1.5949 - val_accuracy: 0.2150
+Epoch 18/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.2184 - accuracy: 0.9200 - val_loss: 1.7608 - val_accuracy: 0.1449
+Epoch 19/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.2141 - accuracy: 0.9311 - val_loss: 1.5441 - val_accuracy: 0.2336
+Epoch 20/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.2227 - accuracy: 0.9278 - val_loss: 1.2057 - val_accuracy: 0.3481
+Epoch 21/25
+57/57 [==============================] - 1s 21ms/step - loss: 0.1939 - accuracy: 0.9344 - val_loss: 0.9093 - val_accuracy: 0.6659
+Epoch 22/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.2335 - accuracy: 0.9178 - val_loss: 1.1016 - val_accuracy: 0.4521
+Epoch 23/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.2000 - accuracy: 0.9356 - val_loss: 1.2209 - val_accuracy: 0.3937
+Epoch 24/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.2076 - accuracy: 0.9289 - val_loss: 1.6346 - val_accuracy: 0.3283
+Epoch 25/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.1593 - accuracy: 0.9500 - val_loss: 1.4428 - val_accuracy: 0.3481
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 66
+Total sequences in class 'nothing': 1628
+Total sequences in class 'moving_arms': 105
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 192
+Total sequences in class 'nothing': 426
+Total sequences in class 'moving_arms': 9
+Model: "sequential_2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ time_distributed_26 (TimeD  (None, 15, 64, 64, 16)    448       
+ istributed)                                                     
+                                                                 
+ time_distributed_27 (TimeD  (None, 15, 16, 16, 16)    0         
+ istributed)                                                     
+                                                                 
+ time_distributed_28 (TimeD  (None, 15, 16, 16, 16)    0         
+ istributed)                                                     
+                                                                 
+ time_distributed_29 (TimeD  (None, 15, 16, 16, 32)    4640      
+ istributed)                                                     
+                                                                 
+ time_distributed_30 (TimeD  (None, 15, 4, 4, 32)      0         
+ istributed)                                                     
+                                                                 
+ time_distributed_31 (TimeD  (None, 15, 4, 4, 32)      0         
+ istributed)                                                     
+                                                                 
+ time_distributed_32 (TimeD  (None, 15, 4, 4, 64)      18496     
+ istributed)                                                     
+                                                                 
+ time_distributed_33 (TimeD  (None, 15, 2, 2, 64)      0         
+ istributed)                                                     
+                                                                 
+ time_distributed_34 (TimeD  (None, 15, 2, 2, 64)      0         
+ istributed)                                                     
+                                                                 
+ time_distributed_35 (TimeD  (None, 15, 2, 2, 64)      36928     
+ istributed)                                                     
+                                                                 
+ time_distributed_36 (TimeD  (None, 15, 1, 1, 64)      0         
+ istributed)                                                     
+                                                                 
+ time_distributed_37 (TimeD  (None, 15, 1, 1, 64)      0         
+ istributed)                                                     
+                                                                 
+ time_distributed_38 (TimeD  (None, 15, 64)            0         
+ istributed)                                                     
+                                                                 
+ lstm_2 (LSTM)               (None, 32)                12416     
+                                                                 
+ dense_2 (Dense)             (None, 3)                 99        
+                                                                 
+=================================================================
+Total params: 73027 (285.26 KB)
+Trainable params: 73027 (285.26 KB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+Epoch 1/25
+57/57 [==============================] - 7s 56ms/step - loss: 1.1002 - accuracy: 0.3656 - val_loss: 1.0847 - val_accuracy: 0.3285
+Epoch 2/25
+57/57 [==============================] - 1s 21ms/step - loss: 0.9392 - accuracy: 0.5600 - val_loss: 1.2287 - val_accuracy: 0.3270
+Epoch 3/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.8031 - accuracy: 0.6167 - val_loss: 1.2999 - val_accuracy: 0.2600
+Epoch 4/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.7033 - accuracy: 0.6667 - val_loss: 1.4221 - val_accuracy: 0.3445
+Epoch 5/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.6284 - accuracy: 0.7311 - val_loss: 1.5392 - val_accuracy: 0.3254
+Epoch 6/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.5982 - accuracy: 0.7644 - val_loss: 1.7657 - val_accuracy: 0.3477
+Epoch 7/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.6013 - accuracy: 0.7289 - val_loss: 1.7691 - val_accuracy: 0.3030
+Epoch 8/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.5598 - accuracy: 0.7533 - val_loss: 1.7858 - val_accuracy: 0.3684
+Epoch 9/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.4961 - accuracy: 0.7978 - val_loss: 1.9705 - val_accuracy: 0.3078
+Epoch 10/25
+57/57 [==============================] - 1s 19ms/step - loss: 0.4796 - accuracy: 0.7967 - val_loss: 2.0004 - val_accuracy: 0.3078
+Epoch 11/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.4397 - accuracy: 0.8089 - val_loss: 1.9840 - val_accuracy: 0.3955
+Epoch 12/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.4367 - accuracy: 0.8211 - val_loss: 1.9603 - val_accuracy: 0.3062
+Epoch 13/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.3970 - accuracy: 0.8422 - val_loss: 1.5675 - val_accuracy: 0.4960
+Epoch 14/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.3451 - accuracy: 0.8556 - val_loss: 2.1107 - val_accuracy: 0.3812
+Epoch 15/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.3364 - accuracy: 0.8544 - val_loss: 1.8691 - val_accuracy: 0.4896
+Epoch 16/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.2950 - accuracy: 0.8689 - val_loss: 1.8894 - val_accuracy: 0.4514
+Epoch 17/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.3088 - accuracy: 0.8589 - val_loss: 1.5120 - val_accuracy: 0.3764
+Epoch 18/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.3139 - accuracy: 0.8556 - val_loss: 2.0461 - val_accuracy: 0.4450
+Epoch 19/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.2761 - accuracy: 0.8811 - val_loss: 2.0490 - val_accuracy: 0.4163
+Epoch 20/25
+57/57 [==============================] - 1s 21ms/step - loss: 0.2761 - accuracy: 0.8744 - val_loss: 1.9742 - val_accuracy: 0.4099
+Epoch 21/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.2375 - accuracy: 0.9044 - val_loss: 2.0759 - val_accuracy: 0.4673
+Epoch 22/25
+57/57 [==============================] - 1s 21ms/step - loss: 0.2405 - accuracy: 0.9000 - val_loss: 1.8764 - val_accuracy: 0.5104
+Epoch 23/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.2438 - accuracy: 0.8956 - val_loss: 2.3150 - val_accuracy: 0.3987
+Epoch 24/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.2407 - accuracy: 0.8989 - val_loss: 2.1410 - val_accuracy: 0.3780
+Epoch 25/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.2007 - accuracy: 0.9178 - val_loss: 2.3247 - val_accuracy: 0.4625
+Current Hyperparameters: {'conv_filters': (32, 64, 128, 128), 'lstm_units': 32, 'dropout_rate': 0.4, 'learning_rate': 0.0001}
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 238
+Total sequences in class 'nothing': 1189
+Total sequences in class 'moving_arms': 56
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 20
+Total sequences in class 'nothing': 865
+Total sequences in class 'moving_arms': 58
+Model: "sequential_3"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ time_distributed_39 (TimeD  (None, 15, 64, 64, 32)    896       
+ istributed)                                                     
+                                                                 
+ time_distributed_40 (TimeD  (None, 15, 16, 16, 32)    0         
+ istributed)                                                     
+                                                                 
+ time_distributed_41 (TimeD  (None, 15, 16, 16, 32)    0         
+ istributed)                                                     
+                                                                 
+ time_distributed_42 (TimeD  (None, 15, 16, 16, 64)    18496     
+ istributed)                                                     
+                                                                 
+ time_distributed_43 (TimeD  (None, 15, 4, 4, 64)      0         
+ istributed)                                                     
+                                                                 
+ time_distributed_44 (TimeD  (None, 15, 4, 4, 64)      0         
+ istributed)                                                     
+                                                                 
+ time_distributed_45 (TimeD  (None, 15, 4, 4, 128)     73856     
+ istributed)                                                     
+                                                                 
+ time_distributed_46 (TimeD  (None, 15, 2, 2, 128)     0         
+ istributed)                                                     
+                                                                 
+ time_distributed_47 (TimeD  (None, 15, 2, 2, 128)     0         
+ istributed)                                                     
+                                                                 
+ time_distributed_48 (TimeD  (None, 15, 2, 2, 128)     147584    
+ istributed)                                                     
+                                                                 
+ time_distributed_49 (TimeD  (None, 15, 1, 1, 128)     0         
+ istributed)                                                     
+                                                                 
+ time_distributed_50 (TimeD  (None, 15, 1, 1, 128)     0         
+ istributed)                                                     
+                                                                 
+ time_distributed_51 (TimeD  (None, 15, 128)           0         
+ istributed)                                                     
+                                                                 
+ lstm_3 (LSTM)               (None, 32)                20608     
+                                                                 
+ dense_3 (Dense)             (None, 3)                 99        
+                                                                 
+=================================================================
+Total params: 261539 (1021.64 KB)
+Trainable params: 261539 (1021.64 KB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+Epoch 1/25
+57/57 [==============================] - 9s 88ms/step - loss: 1.0918 - accuracy: 0.3667 - val_loss: 1.1099 - val_accuracy: 0.0827
+Epoch 2/25
+57/57 [==============================] - 1s 26ms/step - loss: 1.0631 - accuracy: 0.4244 - val_loss: 1.0909 - val_accuracy: 0.0615
+Epoch 3/25
+57/57 [==============================] - 1s 26ms/step - loss: 1.0052 - accuracy: 0.4778 - val_loss: 1.0402 - val_accuracy: 0.1283
+Epoch 4/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.9434 - accuracy: 0.5278 - val_loss: 1.0637 - val_accuracy: 0.1930
+Epoch 5/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.8498 - accuracy: 0.5711 - val_loss: 1.0204 - val_accuracy: 0.2619
+Epoch 6/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.8208 - accuracy: 0.5856 - val_loss: 0.9473 - val_accuracy: 0.5599
+Epoch 7/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.7687 - accuracy: 0.6156 - val_loss: 0.8984 - val_accuracy: 0.5928
+Epoch 8/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.7622 - accuracy: 0.6322 - val_loss: 0.8603 - val_accuracy: 0.7041
+Epoch 9/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.7341 - accuracy: 0.6422 - val_loss: 0.9024 - val_accuracy: 0.5631
+Epoch 10/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.7141 - accuracy: 0.6422 - val_loss: 0.8897 - val_accuracy: 0.5885
+Epoch 11/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.7346 - accuracy: 0.6356 - val_loss: 0.9017 - val_accuracy: 0.5790
+Epoch 12/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.7033 - accuracy: 0.6667 - val_loss: 0.7548 - val_accuracy: 0.8420
+Epoch 13/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.6728 - accuracy: 0.6656 - val_loss: 0.8221 - val_accuracy: 0.7285
+Epoch 14/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.6708 - accuracy: 0.6678 - val_loss: 0.8279 - val_accuracy: 0.6840
+Epoch 15/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.6673 - accuracy: 0.6800 - val_loss: 0.7796 - val_accuracy: 0.7964
+Epoch 16/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.6533 - accuracy: 0.6967 - val_loss: 0.8004 - val_accuracy: 0.7614
+Epoch 17/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.6338 - accuracy: 0.6911 - val_loss: 0.8278 - val_accuracy: 0.7020
+Epoch 18/25
+57/57 [==============================] - 2s 28ms/step - loss: 0.6202 - accuracy: 0.6778 - val_loss: 0.8390 - val_accuracy: 0.6829
+Epoch 19/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.6060 - accuracy: 0.7067 - val_loss: 0.7603 - val_accuracy: 0.8324
+Epoch 20/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.6018 - accuracy: 0.7211 - val_loss: 0.7413 - val_accuracy: 0.8844
+Epoch 21/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.6120 - accuracy: 0.7078 - val_loss: 0.8232 - val_accuracy: 0.7253
+Epoch 22/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.5757 - accuracy: 0.7367 - val_loss: 0.7877 - val_accuracy: 0.8038
+Epoch 23/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.5495 - accuracy: 0.7356 - val_loss: 0.7289 - val_accuracy: 0.8579
+Epoch 24/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.5486 - accuracy: 0.7544 - val_loss: 0.7238 - val_accuracy: 0.8643
+Epoch 25/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.5327 - accuracy: 0.7644 - val_loss: 0.6883 - val_accuracy: 0.8823
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 212
+Total sequences in class 'nothing': 1291
+Total sequences in class 'moving_arms': 67
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 46
+Total sequences in class 'nothing': 763
+Total sequences in class 'moving_arms': 47
+Model: "sequential_4"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ time_distributed_52 (TimeD  (None, 15, 64, 64, 32)    896       
+ istributed)                                                     
+                                                                 
+ time_distributed_53 (TimeD  (None, 15, 16, 16, 32)    0         
+ istributed)                                                     
+                                                                 
+ time_distributed_54 (TimeD  (None, 15, 16, 16, 32)    0         
+ istributed)                                                     
+                                                                 
+ time_distributed_55 (TimeD  (None, 15, 16, 16, 64)    18496     
+ istributed)                                                     
+                                                                 
+ time_distributed_56 (TimeD  (None, 15, 4, 4, 64)      0         
+ istributed)                                                     
+                                                                 
+ time_distributed_57 (TimeD  (None, 15, 4, 4, 64)      0         
+ istributed)                                                     
+                                                                 
+ time_distributed_58 (TimeD  (None, 15, 4, 4, 128)     73856     
+ istributed)                                                     
+                                                                 
+ time_distributed_59 (TimeD  (None, 15, 2, 2, 128)     0         
+ istributed)                                                     
+                                                                 
+ time_distributed_60 (TimeD  (None, 15, 2, 2, 128)     0         
+ istributed)                                                     
+                                                                 
+ time_distributed_61 (TimeD  (None, 15, 2, 2, 128)     147584    
+ istributed)                                                     
+                                                                 
+ time_distributed_62 (TimeD  (None, 15, 1, 1, 128)     0         
+ istributed)                                                     
+                                                                 
+ time_distributed_63 (TimeD  (None, 15, 1, 1, 128)     0         
+ istributed)                                                     
+                                                                 
+ time_distributed_64 (TimeD  (None, 15, 128)           0         
+ istributed)                                                     
+                                                                 
+ lstm_4 (LSTM)               (None, 32)                20608     
+                                                                 
+ dense_4 (Dense)             (None, 3)                 99        
+                                                                 
+=================================================================
+Total params: 261539 (1021.64 KB)
+Trainable params: 261539 (1021.64 KB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+Epoch 1/25
+57/57 [==============================] - 7s 70ms/step - loss: 1.0857 - accuracy: 0.3867 - val_loss: 1.1822 - val_accuracy: 0.0374
+Epoch 2/25
+57/57 [==============================] - 1s 25ms/step - loss: 1.0020 - accuracy: 0.5100 - val_loss: 1.0973 - val_accuracy: 0.2220
+Epoch 3/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.9605 - accuracy: 0.5067 - val_loss: 1.1179 - val_accuracy: 0.1157
+Epoch 4/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.9179 - accuracy: 0.5378 - val_loss: 1.0494 - val_accuracy: 0.4311
+Epoch 5/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.8858 - accuracy: 0.5578 - val_loss: 1.1755 - val_accuracy: 0.0806
+Epoch 6/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.8459 - accuracy: 0.5911 - val_loss: 1.1627 - val_accuracy: 0.0771
+Epoch 7/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.8244 - accuracy: 0.5978 - val_loss: 1.3575 - val_accuracy: 0.0549
+Epoch 8/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.8068 - accuracy: 0.6200 - val_loss: 1.2464 - val_accuracy: 0.1086
+Epoch 9/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.7788 - accuracy: 0.6344 - val_loss: 1.3755 - val_accuracy: 0.0783
+Epoch 10/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.7610 - accuracy: 0.6422 - val_loss: 1.2794 - val_accuracy: 0.1355
+Epoch 11/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.7470 - accuracy: 0.6511 - val_loss: 1.3208 - val_accuracy: 0.1846
+Epoch 12/25
+57/57 [==============================] - 1s 24ms/step - loss: 0.7241 - accuracy: 0.6811 - val_loss: 1.3306 - val_accuracy: 0.1928
+Epoch 13/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.7145 - accuracy: 0.6744 - val_loss: 1.1035 - val_accuracy: 0.3002
+Epoch 14/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.6788 - accuracy: 0.7233 - val_loss: 1.3110 - val_accuracy: 0.2745
+Epoch 15/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.6613 - accuracy: 0.7178 - val_loss: 1.3272 - val_accuracy: 0.2757
+Epoch 16/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.6437 - accuracy: 0.7289 - val_loss: 1.3679 - val_accuracy: 0.2769
+Epoch 17/25
+57/57 [==============================] - 1s 24ms/step - loss: 0.6151 - accuracy: 0.7489 - val_loss: 1.3408 - val_accuracy: 0.2850
+Epoch 18/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.5960 - accuracy: 0.7578 - val_loss: 1.4589 - val_accuracy: 0.2745
+Epoch 19/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.5792 - accuracy: 0.7644 - val_loss: 1.4115 - val_accuracy: 0.2804
+Epoch 20/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.5789 - accuracy: 0.7511 - val_loss: 1.4717 - val_accuracy: 0.2780
+Epoch 21/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.5586 - accuracy: 0.7578 - val_loss: 1.4927 - val_accuracy: 0.2804
+Epoch 22/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.5482 - accuracy: 0.7689 - val_loss: 1.4794 - val_accuracy: 0.2850
+Epoch 23/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.5326 - accuracy: 0.7767 - val_loss: 1.6319 - val_accuracy: 0.2804
+Epoch 24/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.5434 - accuracy: 0.7644 - val_loss: 1.5010 - val_accuracy: 0.2886
+Epoch 25/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.5228 - accuracy: 0.7878 - val_loss: 1.6707 - val_accuracy: 0.2710
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 66
+Total sequences in class 'nothing': 1628
+Total sequences in class 'moving_arms': 105
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 192
+Total sequences in class 'nothing': 426
+Total sequences in class 'moving_arms': 9
+Model: "sequential_5"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ time_distributed_65 (TimeD  (None, 15, 64, 64, 32)    896       
+ istributed)                                                     
+                                                                 
+ time_distributed_66 (TimeD  (None, 15, 16, 16, 32)    0         
+ istributed)                                                     
+                                                                 
+ time_distributed_67 (TimeD  (None, 15, 16, 16, 32)    0         
+ istributed)                                                     
+                                                                 
+ time_distributed_68 (TimeD  (None, 15, 16, 16, 64)    18496     
+ istributed)                                                     
+                                                                 
+ time_distributed_69 (TimeD  (None, 15, 4, 4, 64)      0         
+ istributed)                                                     
+                                                                 
+ time_distributed_70 (TimeD  (None, 15, 4, 4, 64)      0         
+ istributed)                                                     
+                                                                 
+ time_distributed_71 (TimeD  (None, 15, 4, 4, 128)     73856     
+ istributed)                                                     
+                                                                 
+ time_distributed_72 (TimeD  (None, 15, 2, 2, 128)     0         
+ istributed)                                                     
+                                                                 
+ time_distributed_73 (TimeD  (None, 15, 2, 2, 128)     0         
+ istributed)                                                     
+                                                                 
+ time_distributed_74 (TimeD  (None, 15, 2, 2, 128)     147584    
+ istributed)                                                     
+                                                                 
+ time_distributed_75 (TimeD  (None, 15, 1, 1, 128)     0         
+ istributed)                                                     
+                                                                 
+ time_distributed_76 (TimeD  (None, 15, 1, 1, 128)     0         
+ istributed)                                                     
+                                                                 
+ time_distributed_77 (TimeD  (None, 15, 128)           0         
+ istributed)                                                     
+                                                                 
+ lstm_5 (LSTM)               (None, 32)                20608     
+                                                                 
+ dense_5 (Dense)             (None, 3)                 99        
+                                                                 
+=================================================================
+Total params: 261539 (1021.64 KB)
+Trainable params: 261539 (1021.64 KB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+Epoch 1/25
+57/57 [==============================] - 7s 59ms/step - loss: 1.0996 - accuracy: 0.3456 - val_loss: 1.1103 - val_accuracy: 0.0319
+Epoch 2/25
+57/57 [==============================] - 1s 23ms/step - loss: 1.0770 - accuracy: 0.4089 - val_loss: 1.1657 - val_accuracy: 0.0144
+Epoch 3/25
+57/57 [==============================] - 1s 23ms/step - loss: 1.0415 - accuracy: 0.4422 - val_loss: 1.2008 - val_accuracy: 0.1930
+Epoch 4/25
+57/57 [==============================] - 1s 23ms/step - loss: 1.0076 - accuracy: 0.4833 - val_loss: 1.1810 - val_accuracy: 0.1451
+Epoch 5/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.9302 - accuracy: 0.5367 - val_loss: 1.2202 - val_accuracy: 0.1930
+Epoch 6/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.8867 - accuracy: 0.5611 - val_loss: 1.1512 - val_accuracy: 0.3333
+Epoch 7/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.8237 - accuracy: 0.6156 - val_loss: 1.2532 - val_accuracy: 0.2344
+Epoch 8/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.7885 - accuracy: 0.6300 - val_loss: 1.2356 - val_accuracy: 0.3413
+Epoch 9/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.7716 - accuracy: 0.6400 - val_loss: 1.3725 - val_accuracy: 0.2568
+Epoch 10/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.7192 - accuracy: 0.6811 - val_loss: 1.2613 - val_accuracy: 0.3445
+Epoch 11/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.7244 - accuracy: 0.6722 - val_loss: 1.4490 - val_accuracy: 0.2105
+Epoch 12/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.7058 - accuracy: 0.6844 - val_loss: 1.3601 - val_accuracy: 0.3110
+Epoch 13/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.7029 - accuracy: 0.6756 - val_loss: 1.3988 - val_accuracy: 0.3094
+Epoch 14/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.6594 - accuracy: 0.7044 - val_loss: 1.4224 - val_accuracy: 0.2919
+Epoch 15/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.6477 - accuracy: 0.7089 - val_loss: 1.3254 - val_accuracy: 0.3573
+Epoch 16/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.6610 - accuracy: 0.6978 - val_loss: 1.5051 - val_accuracy: 0.2568
+Epoch 17/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.6213 - accuracy: 0.7089 - val_loss: 1.4618 - val_accuracy: 0.3285
+Epoch 18/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.6394 - accuracy: 0.7211 - val_loss: 1.4212 - val_accuracy: 0.2951
+Epoch 19/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.6172 - accuracy: 0.7189 - val_loss: 1.3941 - val_accuracy: 0.3541
+Epoch 20/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.6037 - accuracy: 0.7300 - val_loss: 1.4512 - val_accuracy: 0.3206
+Epoch 21/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.6098 - accuracy: 0.7211 - val_loss: 1.3711 - val_accuracy: 0.3668
+Epoch 22/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.5914 - accuracy: 0.7267 - val_loss: 1.4829 - val_accuracy: 0.3461
+Epoch 23/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.5778 - accuracy: 0.7256 - val_loss: 1.4286 - val_accuracy: 0.3604
+Epoch 24/25
+57/57 [==============================] - 1s 24ms/step - loss: 0.5594 - accuracy: 0.7467 - val_loss: 1.4803 - val_accuracy: 0.3397
+Epoch 25/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.5576 - accuracy: 0.7533 - val_loss: 1.4717 - val_accuracy: 0.3700
+Current Hyperparameters: {'conv_filters': (32, 64, 128, 128), 'lstm_units': 64, 'dropout_rate': 0.4, 'learning_rate': 0.0001}
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 238
+Total sequences in class 'nothing': 1189
+Total sequences in class 'moving_arms': 56
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 20
+Total sequences in class 'nothing': 865
+Total sequences in class 'moving_arms': 58
+Model: "sequential_6"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ time_distributed_78 (TimeD  (None, 15, 64, 64, 32)    896       
+ istributed)                                                     
+                                                                 
+ time_distributed_79 (TimeD  (None, 15, 16, 16, 32)    0         
+ istributed)                                                     
+                                                                 
+ time_distributed_80 (TimeD  (None, 15, 16, 16, 32)    0         
+ istributed)                                                     
+                                                                 
+ time_distributed_81 (TimeD  (None, 15, 16, 16, 64)    18496     
+ istributed)                                                     
+                                                                 
+ time_distributed_82 (TimeD  (None, 15, 4, 4, 64)      0         
+ istributed)                                                     
+                                                                 
+ time_distributed_83 (TimeD  (None, 15, 4, 4, 64)      0         
+ istributed)                                                     
+                                                                 
+ time_distributed_84 (TimeD  (None, 15, 4, 4, 128)     73856     
+ istributed)                                                     
+                                                                 
+ time_distributed_85 (TimeD  (None, 15, 2, 2, 128)     0         
+ istributed)                                                     
+                                                                 
+ time_distributed_86 (TimeD  (None, 15, 2, 2, 128)     0         
+ istributed)                                                     
+                                                                 
+ time_distributed_87 (TimeD  (None, 15, 2, 2, 128)     147584    
+ istributed)                                                     
+                                                                 
+ time_distributed_88 (TimeD  (None, 15, 1, 1, 128)     0         
+ istributed)                                                     
+                                                                 
+ time_distributed_89 (TimeD  (None, 15, 1, 1, 128)     0         
+ istributed)                                                     
+                                                                 
+ time_distributed_90 (TimeD  (None, 15, 128)           0         
+ istributed)                                                     
+                                                                 
+ lstm_6 (LSTM)               (None, 64)                49408     
+                                                                 
+ dense_6 (Dense)             (None, 3)                 195       
+                                                                 
+=================================================================
+Total params: 290435 (1.11 MB)
+Trainable params: 290435 (1.11 MB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+Epoch 1/25
+57/57 [==============================] - 7s 71ms/step - loss: 1.1056 - accuracy: 0.3589 - val_loss: 1.0687 - val_accuracy: 0.2195
+Epoch 2/25
+57/57 [==============================] - 1s 25ms/step - loss: 1.0733 - accuracy: 0.4189 - val_loss: 1.0380 - val_accuracy: 0.3934
+Epoch 3/25
+57/57 [==============================] - 1s 26ms/step - loss: 1.0372 - accuracy: 0.4556 - val_loss: 1.0534 - val_accuracy: 0.1919
+Epoch 4/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.9825 - accuracy: 0.5167 - val_loss: 1.0107 - val_accuracy: 0.2174
+Epoch 5/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.9028 - accuracy: 0.5567 - val_loss: 1.0603 - val_accuracy: 0.2047
+Epoch 6/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.8246 - accuracy: 0.6011 - val_loss: 0.8929 - val_accuracy: 0.6744
+Epoch 7/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.7860 - accuracy: 0.6356 - val_loss: 0.8378 - val_accuracy: 0.7667
+Epoch 8/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.7564 - accuracy: 0.6289 - val_loss: 0.8778 - val_accuracy: 0.5790
+Epoch 9/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.7434 - accuracy: 0.6567 - val_loss: 0.8024 - val_accuracy: 0.7794
+Epoch 10/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.7067 - accuracy: 0.6567 - val_loss: 0.7632 - val_accuracy: 0.8197
+Epoch 11/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.6848 - accuracy: 0.6833 - val_loss: 0.7388 - val_accuracy: 0.8282
+Epoch 12/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.6797 - accuracy: 0.6922 - val_loss: 0.7859 - val_accuracy: 0.7603
+Epoch 13/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.6653 - accuracy: 0.7011 - val_loss: 0.7291 - val_accuracy: 0.8324
+Epoch 14/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.6516 - accuracy: 0.7056 - val_loss: 0.7599 - val_accuracy: 0.8261
+Epoch 15/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.6264 - accuracy: 0.6978 - val_loss: 0.6960 - val_accuracy: 0.8802
+Epoch 16/25
+57/57 [==============================] - 2s 27ms/step - loss: 0.6217 - accuracy: 0.7078 - val_loss: 0.7148 - val_accuracy: 0.8706
+Epoch 17/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.6087 - accuracy: 0.7156 - val_loss: 0.6532 - val_accuracy: 0.8993
+Epoch 18/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.6082 - accuracy: 0.7189 - val_loss: 0.6531 - val_accuracy: 0.8940
+Epoch 19/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.5849 - accuracy: 0.7222 - val_loss: 0.6635 - val_accuracy: 0.8950
+Epoch 20/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.5681 - accuracy: 0.7544 - val_loss: 0.6209 - val_accuracy: 0.8929
+Epoch 21/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.5556 - accuracy: 0.7456 - val_loss: 0.5860 - val_accuracy: 0.8950
+Epoch 22/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.5511 - accuracy: 0.7633 - val_loss: 0.5269 - val_accuracy: 0.9077
+Epoch 23/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.5428 - accuracy: 0.7578 - val_loss: 0.5498 - val_accuracy: 0.8971
+Epoch 24/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.5375 - accuracy: 0.7544 - val_loss: 0.5840 - val_accuracy: 0.8950
+Epoch 25/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.5382 - accuracy: 0.7578 - val_loss: 0.5191 - val_accuracy: 0.9024
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 212
+Total sequences in class 'nothing': 1291
+Total sequences in class 'moving_arms': 67
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 46
+Total sequences in class 'nothing': 763
+Total sequences in class 'moving_arms': 47
+Model: "sequential_7"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ time_distributed_91 (TimeD  (None, 15, 64, 64, 32)    896       
+ istributed)                                                     
+                                                                 
+ time_distributed_92 (TimeD  (None, 15, 16, 16, 32)    0         
+ istributed)                                                     
+                                                                 
+ time_distributed_93 (TimeD  (None, 15, 16, 16, 32)    0         
+ istributed)                                                     
+                                                                 
+ time_distributed_94 (TimeD  (None, 15, 16, 16, 64)    18496     
+ istributed)                                                     
+                                                                 
+ time_distributed_95 (TimeD  (None, 15, 4, 4, 64)      0         
+ istributed)                                                     
+                                                                 
+ time_distributed_96 (TimeD  (None, 15, 4, 4, 64)      0         
+ istributed)                                                     
+                                                                 
+ time_distributed_97 (TimeD  (None, 15, 4, 4, 128)     73856     
+ istributed)                                                     
+                                                                 
+ time_distributed_98 (TimeD  (None, 15, 2, 2, 128)     0         
+ istributed)                                                     
+                                                                 
+ time_distributed_99 (TimeD  (None, 15, 2, 2, 128)     0         
+ istributed)                                                     
+                                                                 
+ time_distributed_100 (Time  (None, 15, 2, 2, 128)     147584    
+ Distributed)                                                    
+                                                                 
+ time_distributed_101 (Time  (None, 15, 1, 1, 128)     0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_102 (Time  (None, 15, 1, 1, 128)     0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_103 (Time  (None, 15, 128)           0         
+ Distributed)                                                    
+                                                                 
+ lstm_7 (LSTM)               (None, 64)                49408     
+                                                                 
+ dense_7 (Dense)             (None, 3)                 195       
+                                                                 
+=================================================================
+Total params: 290435 (1.11 MB)
+Trainable params: 290435 (1.11 MB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+Epoch 1/25
+57/57 [==============================] - 8s 68ms/step - loss: 1.0815 - accuracy: 0.4000 - val_loss: 1.1902 - val_accuracy: 0.0514
+Epoch 2/25
+57/57 [==============================] - 1s 25ms/step - loss: 1.0041 - accuracy: 0.4867 - val_loss: 1.0931 - val_accuracy: 0.1297
+Epoch 3/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.9269 - accuracy: 0.5233 - val_loss: 1.1693 - val_accuracy: 0.0479
+Epoch 4/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.8949 - accuracy: 0.5578 - val_loss: 1.0792 - val_accuracy: 0.0970
+Epoch 5/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.8478 - accuracy: 0.5978 - val_loss: 1.0535 - val_accuracy: 0.3341
+Epoch 6/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.8115 - accuracy: 0.6189 - val_loss: 1.1077 - val_accuracy: 0.1542
+Epoch 7/25
+57/57 [==============================] - 2s 27ms/step - loss: 0.7843 - accuracy: 0.6344 - val_loss: 1.0439 - val_accuracy: 0.3750
+Epoch 8/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.7555 - accuracy: 0.6322 - val_loss: 1.0366 - val_accuracy: 0.4404
+Epoch 9/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.7320 - accuracy: 0.6578 - val_loss: 1.1156 - val_accuracy: 0.2079
+Epoch 10/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.7339 - accuracy: 0.6644 - val_loss: 1.1145 - val_accuracy: 0.2266
+Epoch 11/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.7065 - accuracy: 0.6578 - val_loss: 1.2010 - val_accuracy: 0.1530
+Epoch 12/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.7097 - accuracy: 0.6600 - val_loss: 1.1714 - val_accuracy: 0.1776
+Epoch 13/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.7048 - accuracy: 0.6789 - val_loss: 1.0756 - val_accuracy: 0.3072
+Epoch 14/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.6566 - accuracy: 0.7078 - val_loss: 1.1472 - val_accuracy: 0.2290
+Epoch 15/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.6327 - accuracy: 0.7111 - val_loss: 1.1288 - val_accuracy: 0.2453
+Epoch 16/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.6124 - accuracy: 0.7356 - val_loss: 1.1744 - val_accuracy: 0.2044
+Epoch 17/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.5894 - accuracy: 0.7322 - val_loss: 1.1202 - val_accuracy: 0.2675
+Epoch 18/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.5859 - accuracy: 0.7411 - val_loss: 1.1402 - val_accuracy: 0.2979
+Epoch 19/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.5563 - accuracy: 0.7433 - val_loss: 1.3253 - val_accuracy: 0.2348
+Epoch 20/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.5247 - accuracy: 0.7800 - val_loss: 1.3982 - val_accuracy: 0.2313
+Epoch 21/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.5017 - accuracy: 0.7978 - val_loss: 1.1477 - val_accuracy: 0.3364
+Epoch 22/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.4733 - accuracy: 0.7900 - val_loss: 1.4010 - val_accuracy: 0.2547
+Epoch 23/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.4896 - accuracy: 0.7733 - val_loss: 1.3878 - val_accuracy: 0.2874
+Epoch 24/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.4866 - accuracy: 0.7933 - val_loss: 1.5843 - val_accuracy: 0.2418
+Epoch 25/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.4766 - accuracy: 0.8200 - val_loss: 1.5079 - val_accuracy: 0.2407
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 66
+Total sequences in class 'nothing': 1628
+Total sequences in class 'moving_arms': 105
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 192
+Total sequences in class 'nothing': 426
+Total sequences in class 'moving_arms': 9
+Model: "sequential_8"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ time_distributed_104 (Time  (None, 15, 64, 64, 32)    896       
+ Distributed)                                                    
+                                                                 
+ time_distributed_105 (Time  (None, 15, 16, 16, 32)    0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_106 (Time  (None, 15, 16, 16, 32)    0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_107 (Time  (None, 15, 16, 16, 64)    18496     
+ Distributed)                                                    
+                                                                 
+ time_distributed_108 (Time  (None, 15, 4, 4, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_109 (Time  (None, 15, 4, 4, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_110 (Time  (None, 15, 4, 4, 128)     73856     
+ Distributed)                                                    
+                                                                 
+ time_distributed_111 (Time  (None, 15, 2, 2, 128)     0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_112 (Time  (None, 15, 2, 2, 128)     0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_113 (Time  (None, 15, 2, 2, 128)     147584    
+ Distributed)                                                    
+                                                                 
+ time_distributed_114 (Time  (None, 15, 1, 1, 128)     0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_115 (Time  (None, 15, 1, 1, 128)     0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_116 (Time  (None, 15, 128)           0         
+ Distributed)                                                    
+                                                                 
+ lstm_8 (LSTM)               (None, 64)                49408     
+                                                                 
+ dense_8 (Dense)             (None, 3)                 195       
+                                                                 
+=================================================================
+Total params: 290435 (1.11 MB)
+Trainable params: 290435 (1.11 MB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+Epoch 1/25
+57/57 [==============================] - 7s 57ms/step - loss: 1.1012 - accuracy: 0.3433 - val_loss: 1.1120 - val_accuracy: 0.0144
+Epoch 2/25
+57/57 [==============================] - 1s 23ms/step - loss: 1.0803 - accuracy: 0.3844 - val_loss: 1.1449 - val_accuracy: 0.0144
+Epoch 3/25
+57/57 [==============================] - 1s 23ms/step - loss: 1.0490 - accuracy: 0.4689 - val_loss: 1.1723 - val_accuracy: 0.0144
+Epoch 4/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.9562 - accuracy: 0.5467 - val_loss: 1.3206 - val_accuracy: 0.0144
+Epoch 5/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.8324 - accuracy: 0.6133 - val_loss: 1.4452 - val_accuracy: 0.0383
+Epoch 6/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.7550 - accuracy: 0.6711 - val_loss: 1.4483 - val_accuracy: 0.1882
+Epoch 7/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.7346 - accuracy: 0.6644 - val_loss: 1.5892 - val_accuracy: 0.1691
+Epoch 8/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.7105 - accuracy: 0.6878 - val_loss: 1.5571 - val_accuracy: 0.1611
+Epoch 9/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.6936 - accuracy: 0.6811 - val_loss: 1.5707 - val_accuracy: 0.2281
+Epoch 10/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.7168 - accuracy: 0.6667 - val_loss: 1.5830 - val_accuracy: 0.1770
+Epoch 11/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.6739 - accuracy: 0.6989 - val_loss: 1.6406 - val_accuracy: 0.2121
+Epoch 12/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.6651 - accuracy: 0.6933 - val_loss: 1.5430 - val_accuracy: 0.2919
+Epoch 13/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.6400 - accuracy: 0.7189 - val_loss: 1.5549 - val_accuracy: 0.2153
+Epoch 14/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.6279 - accuracy: 0.7256 - val_loss: 1.4288 - val_accuracy: 0.2472
+Epoch 15/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.6273 - accuracy: 0.7133 - val_loss: 1.5280 - val_accuracy: 0.2041
+Epoch 16/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.6236 - accuracy: 0.7256 - val_loss: 1.5433 - val_accuracy: 0.2903
+Epoch 17/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.6265 - accuracy: 0.7167 - val_loss: 1.4887 - val_accuracy: 0.2265
+Epoch 18/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.5919 - accuracy: 0.7389 - val_loss: 1.5707 - val_accuracy: 0.2089
+Epoch 19/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.5757 - accuracy: 0.7367 - val_loss: 1.5138 - val_accuracy: 0.2472
+Epoch 20/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.5623 - accuracy: 0.7578 - val_loss: 1.4040 - val_accuracy: 0.2663
+Epoch 21/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.5665 - accuracy: 0.7511 - val_loss: 1.4927 - val_accuracy: 0.2249
+Epoch 22/25
+57/57 [==============================] - 1s 24ms/step - loss: 0.5307 - accuracy: 0.7567 - val_loss: 1.6109 - val_accuracy: 0.2313
+Epoch 23/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.5285 - accuracy: 0.7556 - val_loss: 1.4777 - val_accuracy: 0.2568
+Epoch 24/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.5290 - accuracy: 0.7511 - val_loss: 1.5248 - val_accuracy: 0.3030
+Epoch 25/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.5170 - accuracy: 0.7689 - val_loss: 1.4315 - val_accuracy: 0.2584
+Current Hyperparameters: {'conv_filters': (16, 32, 64, 64), 'lstm_units': 64, 'dropout_rate': 0.4, 'learning_rate': 0.001}
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 238
+Total sequences in class 'nothing': 1189
+Total sequences in class 'moving_arms': 56
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 20
+Total sequences in class 'nothing': 865
+Total sequences in class 'moving_arms': 58
+Model: "sequential_9"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ time_distributed_117 (Time  (None, 15, 64, 64, 16)    448       
+ Distributed)                                                    
+                                                                 
+ time_distributed_118 (Time  (None, 15, 16, 16, 16)    0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_119 (Time  (None, 15, 16, 16, 16)    0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_120 (Time  (None, 15, 16, 16, 32)    4640      
+ Distributed)                                                    
+                                                                 
+ time_distributed_121 (Time  (None, 15, 4, 4, 32)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_122 (Time  (None, 15, 4, 4, 32)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_123 (Time  (None, 15, 4, 4, 64)      18496     
+ Distributed)                                                    
+                                                                 
+ time_distributed_124 (Time  (None, 15, 2, 2, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_125 (Time  (None, 15, 2, 2, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_126 (Time  (None, 15, 2, 2, 64)      36928     
+ Distributed)                                                    
+                                                                 
+ time_distributed_127 (Time  (None, 15, 1, 1, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_128 (Time  (None, 15, 1, 1, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_129 (Time  (None, 15, 64)            0         
+ Distributed)                                                    
+                                                                 
+ lstm_9 (LSTM)               (None, 64)                33024     
+                                                                 
+ dense_9 (Dense)             (None, 3)                 195       
+                                                                 
+=================================================================
+Total params: 93731 (366.14 KB)
+Trainable params: 93731 (366.14 KB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+Epoch 1/25
+57/57 [==============================] - 7s 67ms/step - loss: 1.0943 - accuracy: 0.3844 - val_loss: 1.0406 - val_accuracy: 0.1220
+Epoch 2/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.8637 - accuracy: 0.5667 - val_loss: 1.0259 - val_accuracy: 0.2503
+Epoch 3/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.7147 - accuracy: 0.6267 - val_loss: 0.9504 - val_accuracy: 0.2344
+Epoch 4/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.6836 - accuracy: 0.6722 - val_loss: 0.6584 - val_accuracy: 0.9099
+Epoch 5/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.6510 - accuracy: 0.6867 - val_loss: 0.6857 - val_accuracy: 0.7826
+Epoch 6/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.5714 - accuracy: 0.7289 - val_loss: 0.5102 - val_accuracy: 0.8971
+Epoch 7/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.5680 - accuracy: 0.7367 - val_loss: 0.7192 - val_accuracy: 0.7359
+Epoch 8/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.5306 - accuracy: 0.7489 - val_loss: 0.6749 - val_accuracy: 0.7285
+Epoch 9/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.4559 - accuracy: 0.7933 - val_loss: 0.9156 - val_accuracy: 0.5642
+Epoch 10/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.4730 - accuracy: 0.8022 - val_loss: 0.7979 - val_accuracy: 0.6257
+Epoch 11/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.4100 - accuracy: 0.8267 - val_loss: 0.7898 - val_accuracy: 0.6341
+Epoch 12/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.3974 - accuracy: 0.8211 - val_loss: 1.7430 - val_accuracy: 0.2121
+Epoch 13/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.3880 - accuracy: 0.8244 - val_loss: 0.9387 - val_accuracy: 0.5090
+Epoch 14/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.3611 - accuracy: 0.8478 - val_loss: 1.3543 - val_accuracy: 0.3860
+Epoch 15/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.3500 - accuracy: 0.8533 - val_loss: 0.9647 - val_accuracy: 0.5408
+Epoch 16/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.3026 - accuracy: 0.8733 - val_loss: 1.1782 - val_accuracy: 0.4836
+Epoch 17/25
+57/57 [==============================] - 1s 24ms/step - loss: 0.3055 - accuracy: 0.8800 - val_loss: 0.9645 - val_accuracy: 0.6161
+Epoch 18/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.3257 - accuracy: 0.8622 - val_loss: 1.1545 - val_accuracy: 0.3765
+Epoch 19/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.3059 - accuracy: 0.8767 - val_loss: 1.2664 - val_accuracy: 0.3754
+Epoch 20/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.3176 - accuracy: 0.8689 - val_loss: 1.0775 - val_accuracy: 0.5175
+Epoch 21/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.2852 - accuracy: 0.8744 - val_loss: 1.1226 - val_accuracy: 0.5748
+Epoch 22/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.2593 - accuracy: 0.8944 - val_loss: 0.9998 - val_accuracy: 0.5938
+Epoch 23/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.2402 - accuracy: 0.9044 - val_loss: 1.3937 - val_accuracy: 0.4178
+Epoch 24/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.2622 - accuracy: 0.8933 - val_loss: 1.4635 - val_accuracy: 0.3330
+Epoch 25/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.2443 - accuracy: 0.9133 - val_loss: 1.2146 - val_accuracy: 0.4984
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 212
+Total sequences in class 'nothing': 1291
+Total sequences in class 'moving_arms': 67
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 46
+Total sequences in class 'nothing': 763
+Total sequences in class 'moving_arms': 47
+Model: "sequential_10"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ time_distributed_130 (Time  (None, 15, 64, 64, 16)    448       
+ Distributed)                                                    
+                                                                 
+ time_distributed_131 (Time  (None, 15, 16, 16, 16)    0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_132 (Time  (None, 15, 16, 16, 16)    0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_133 (Time  (None, 15, 16, 16, 32)    4640      
+ Distributed)                                                    
+                                                                 
+ time_distributed_134 (Time  (None, 15, 4, 4, 32)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_135 (Time  (None, 15, 4, 4, 32)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_136 (Time  (None, 15, 4, 4, 64)      18496     
+ Distributed)                                                    
+                                                                 
+ time_distributed_137 (Time  (None, 15, 2, 2, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_138 (Time  (None, 15, 2, 2, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_139 (Time  (None, 15, 2, 2, 64)      36928     
+ Distributed)                                                    
+                                                                 
+ time_distributed_140 (Time  (None, 15, 1, 1, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_141 (Time  (None, 15, 1, 1, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_142 (Time  (None, 15, 64)            0         
+ Distributed)                                                    
+                                                                 
+ lstm_10 (LSTM)              (None, 64)                33024     
+                                                                 
+ dense_10 (Dense)            (None, 3)                 195       
+                                                                 
+=================================================================
+Total params: 93731 (366.14 KB)
+Trainable params: 93731 (366.14 KB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+Epoch 1/25
+57/57 [==============================] - 7s 64ms/step - loss: 1.0578 - accuracy: 0.4322 - val_loss: 1.2268 - val_accuracy: 0.0397
+Epoch 2/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.7984 - accuracy: 0.6022 - val_loss: 1.3408 - val_accuracy: 0.0666
+Epoch 3/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.6818 - accuracy: 0.6811 - val_loss: 1.2613 - val_accuracy: 0.1963
+Epoch 4/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.6005 - accuracy: 0.7211 - val_loss: 1.3751 - val_accuracy: 0.0911
+Epoch 5/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.5474 - accuracy: 0.7600 - val_loss: 1.6540 - val_accuracy: 0.0876
+Epoch 6/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.4887 - accuracy: 0.7911 - val_loss: 1.6463 - val_accuracy: 0.1460
+Epoch 7/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.4924 - accuracy: 0.7933 - val_loss: 1.5068 - val_accuracy: 0.3107
+Epoch 8/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.4154 - accuracy: 0.8311 - val_loss: 2.0253 - val_accuracy: 0.1180
+Epoch 9/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.4173 - accuracy: 0.8333 - val_loss: 1.5441 - val_accuracy: 0.2243
+Epoch 10/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.3642 - accuracy: 0.8622 - val_loss: 1.8284 - val_accuracy: 0.1379
+Epoch 11/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.3677 - accuracy: 0.8522 - val_loss: 1.3931 - val_accuracy: 0.2745
+Epoch 12/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.2938 - accuracy: 0.8878 - val_loss: 1.7606 - val_accuracy: 0.1974
+Epoch 13/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.2862 - accuracy: 0.8900 - val_loss: 1.2749 - val_accuracy: 0.3773
+Epoch 14/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.2828 - accuracy: 0.8933 - val_loss: 2.0509 - val_accuracy: 0.0888
+Epoch 15/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.3184 - accuracy: 0.8833 - val_loss: 1.4854 - val_accuracy: 0.2757
+Epoch 16/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.2473 - accuracy: 0.8944 - val_loss: 1.4826 - val_accuracy: 0.3446
+Epoch 17/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.2286 - accuracy: 0.9167 - val_loss: 1.7131 - val_accuracy: 0.3727
+Epoch 18/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.2560 - accuracy: 0.8978 - val_loss: 1.7879 - val_accuracy: 0.2196
+Epoch 19/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.3095 - accuracy: 0.8756 - val_loss: 0.8601 - val_accuracy: 0.6834
+Epoch 20/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.2409 - accuracy: 0.9078 - val_loss: 1.6731 - val_accuracy: 0.2722
+Epoch 21/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.2175 - accuracy: 0.9200 - val_loss: 1.1204 - val_accuracy: 0.5093
+Epoch 22/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.2510 - accuracy: 0.9100 - val_loss: 1.1565 - val_accuracy: 0.5012
+Epoch 23/25
+57/57 [==============================] - 1s 21ms/step - loss: 0.2549 - accuracy: 0.9033 - val_loss: 1.7199 - val_accuracy: 0.2991
+Epoch 24/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.1972 - accuracy: 0.9322 - val_loss: 1.8999 - val_accuracy: 0.2839
+Epoch 25/25
+57/57 [==============================] - 1s 21ms/step - loss: 0.2056 - accuracy: 0.9244 - val_loss: 1.8334 - val_accuracy: 0.3715
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 66
+Total sequences in class 'nothing': 1628
+Total sequences in class 'moving_arms': 105
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 192
+Total sequences in class 'nothing': 426
+Total sequences in class 'moving_arms': 9
+Model: "sequential_11"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ time_distributed_143 (Time  (None, 15, 64, 64, 16)    448       
+ Distributed)                                                    
+                                                                 
+ time_distributed_144 (Time  (None, 15, 16, 16, 16)    0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_145 (Time  (None, 15, 16, 16, 16)    0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_146 (Time  (None, 15, 16, 16, 32)    4640      
+ Distributed)                                                    
+                                                                 
+ time_distributed_147 (Time  (None, 15, 4, 4, 32)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_148 (Time  (None, 15, 4, 4, 32)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_149 (Time  (None, 15, 4, 4, 64)      18496     
+ Distributed)                                                    
+                                                                 
+ time_distributed_150 (Time  (None, 15, 2, 2, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_151 (Time  (None, 15, 2, 2, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_152 (Time  (None, 15, 2, 2, 64)      36928     
+ Distributed)                                                    
+                                                                 
+ time_distributed_153 (Time  (None, 15, 1, 1, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_154 (Time  (None, 15, 1, 1, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_155 (Time  (None, 15, 64)            0         
+ Distributed)                                                    
+                                                                 
+ lstm_11 (LSTM)              (None, 64)                33024     
+                                                                 
+ dense_11 (Dense)            (None, 3)                 195       
+                                                                 
+=================================================================
+Total params: 93731 (366.14 KB)
+Trainable params: 93731 (366.14 KB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+Epoch 1/25
+57/57 [==============================] - 7s 55ms/step - loss: 1.0975 - accuracy: 0.3622 - val_loss: 1.1275 - val_accuracy: 0.1978
+Epoch 2/25
+57/57 [==============================] - 1s 20ms/step - loss: 1.0277 - accuracy: 0.4467 - val_loss: 1.3311 - val_accuracy: 0.0144
+Epoch 3/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.8092 - accuracy: 0.6189 - val_loss: 1.3512 - val_accuracy: 0.3477
+Epoch 4/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.7093 - accuracy: 0.6544 - val_loss: 1.5165 - val_accuracy: 0.3158
+Epoch 5/25
+57/57 [==============================] - 1s 21ms/step - loss: 0.6332 - accuracy: 0.6889 - val_loss: 1.5153 - val_accuracy: 0.3190
+Epoch 6/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.5910 - accuracy: 0.7000 - val_loss: 1.6751 - val_accuracy: 0.3748
+Epoch 7/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.5929 - accuracy: 0.7044 - val_loss: 1.6492 - val_accuracy: 0.3509
+Epoch 8/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.4955 - accuracy: 0.7556 - val_loss: 1.5270 - val_accuracy: 0.3876
+Epoch 9/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.4656 - accuracy: 0.7756 - val_loss: 1.8470 - val_accuracy: 0.3493
+Epoch 10/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.4418 - accuracy: 0.8089 - val_loss: 1.4581 - val_accuracy: 0.4737
+Epoch 11/25
+57/57 [==============================] - 1s 21ms/step - loss: 0.4312 - accuracy: 0.7856 - val_loss: 1.7531 - val_accuracy: 0.2951
+Epoch 12/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.3885 - accuracy: 0.8200 - val_loss: 1.4612 - val_accuracy: 0.5311
+Epoch 13/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.3895 - accuracy: 0.8167 - val_loss: 1.3048 - val_accuracy: 0.6507
+Epoch 14/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.3600 - accuracy: 0.8300 - val_loss: 1.5766 - val_accuracy: 0.3620
+Epoch 15/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.3370 - accuracy: 0.8456 - val_loss: 1.4549 - val_accuracy: 0.4067
+Epoch 16/25
+57/57 [==============================] - 1s 21ms/step - loss: 0.3161 - accuracy: 0.8533 - val_loss: 1.8777 - val_accuracy: 0.3046
+Epoch 17/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.3039 - accuracy: 0.8567 - val_loss: 1.3260 - val_accuracy: 0.5391
+Epoch 18/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.3372 - accuracy: 0.8511 - val_loss: 1.4785 - val_accuracy: 0.4179
+Epoch 19/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.2906 - accuracy: 0.8700 - val_loss: 2.3639 - val_accuracy: 0.2105
+Epoch 20/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.3185 - accuracy: 0.8567 - val_loss: 2.1115 - val_accuracy: 0.3062
+Epoch 21/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.2829 - accuracy: 0.8789 - val_loss: 2.5769 - val_accuracy: 0.3142
+Epoch 22/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.2502 - accuracy: 0.8911 - val_loss: 1.4402 - val_accuracy: 0.6411
+Epoch 23/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.2699 - accuracy: 0.8833 - val_loss: 1.3080 - val_accuracy: 0.5439
+Epoch 24/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.2369 - accuracy: 0.9011 - val_loss: 1.6852 - val_accuracy: 0.4099
+Epoch 25/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.2196 - accuracy: 0.9156 - val_loss: 1.8856 - val_accuracy: 0.3397
+Current Hyperparameters: {'conv_filters': (16, 32, 64, 64), 'lstm_units': 32, 'dropout_rate': 0.4, 'learning_rate': 0.0001}
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 238
+Total sequences in class 'nothing': 1189
+Total sequences in class 'moving_arms': 56
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 20
+Total sequences in class 'nothing': 865
+Total sequences in class 'moving_arms': 58
+Model: "sequential_12"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ time_distributed_156 (Time  (None, 15, 64, 64, 16)    448       
+ Distributed)                                                    
+                                                                 
+ time_distributed_157 (Time  (None, 15, 16, 16, 16)    0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_158 (Time  (None, 15, 16, 16, 16)    0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_159 (Time  (None, 15, 16, 16, 32)    4640      
+ Distributed)                                                    
+                                                                 
+ time_distributed_160 (Time  (None, 15, 4, 4, 32)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_161 (Time  (None, 15, 4, 4, 32)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_162 (Time  (None, 15, 4, 4, 64)      18496     
+ Distributed)                                                    
+                                                                 
+ time_distributed_163 (Time  (None, 15, 2, 2, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_164 (Time  (None, 15, 2, 2, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_165 (Time  (None, 15, 2, 2, 64)      36928     
+ Distributed)                                                    
+                                                                 
+ time_distributed_166 (Time  (None, 15, 1, 1, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_167 (Time  (None, 15, 1, 1, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_168 (Time  (None, 15, 64)            0         
+ Distributed)                                                    
+                                                                 
+ lstm_12 (LSTM)              (None, 32)                12416     
+                                                                 
+ dense_12 (Dense)            (None, 3)                 99        
+                                                                 
+=================================================================
+Total params: 73027 (285.26 KB)
+Trainable params: 73027 (285.26 KB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+Epoch 1/25
+57/57 [==============================] - 7s 68ms/step - loss: 1.0941 - accuracy: 0.3833 - val_loss: 1.1902 - val_accuracy: 0.0615
+Epoch 2/25
+57/57 [==============================] - 1s 23ms/step - loss: 1.0786 - accuracy: 0.4200 - val_loss: 1.1664 - val_accuracy: 0.0753
+Epoch 3/25
+57/57 [==============================] - 1s 23ms/step - loss: 1.0610 - accuracy: 0.4400 - val_loss: 1.1314 - val_accuracy: 0.0742
+Epoch 4/25
+57/57 [==============================] - 1s 23ms/step - loss: 1.0435 - accuracy: 0.4522 - val_loss: 1.0979 - val_accuracy: 0.0901
+Epoch 5/25
+57/57 [==============================] - 1s 23ms/step - loss: 1.0171 - accuracy: 0.4578 - val_loss: 1.0536 - val_accuracy: 0.0923
+Epoch 6/25
+57/57 [==============================] - 1s 23ms/step - loss: 1.0067 - accuracy: 0.4789 - val_loss: 1.0860 - val_accuracy: 0.1050
+Epoch 7/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.9773 - accuracy: 0.5156 - val_loss: 1.0437 - val_accuracy: 0.1410
+Epoch 8/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.9631 - accuracy: 0.5311 - val_loss: 1.0678 - val_accuracy: 0.1177
+Epoch 9/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.9323 - accuracy: 0.5311 - val_loss: 1.0841 - val_accuracy: 0.1198
+Epoch 10/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.9022 - accuracy: 0.5633 - val_loss: 1.0692 - val_accuracy: 0.1527
+Epoch 11/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.8812 - accuracy: 0.5733 - val_loss: 1.0525 - val_accuracy: 0.1835
+Epoch 12/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.8505 - accuracy: 0.5978 - val_loss: 1.0102 - val_accuracy: 0.2206
+Epoch 13/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.8171 - accuracy: 0.6167 - val_loss: 1.0148 - val_accuracy: 0.2662
+Epoch 14/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.7992 - accuracy: 0.6133 - val_loss: 0.9772 - val_accuracy: 0.4072
+Epoch 15/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.7796 - accuracy: 0.6144 - val_loss: 0.8943 - val_accuracy: 0.7762
+Epoch 16/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.7594 - accuracy: 0.6289 - val_loss: 0.9029 - val_accuracy: 0.7253
+Epoch 17/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.7419 - accuracy: 0.6389 - val_loss: 0.8559 - val_accuracy: 0.8081
+Epoch 18/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.7316 - accuracy: 0.6567 - val_loss: 0.8633 - val_accuracy: 0.7837
+Epoch 19/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.7269 - accuracy: 0.6611 - val_loss: 0.8125 - val_accuracy: 0.8356
+Epoch 20/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.6941 - accuracy: 0.6656 - val_loss: 0.8277 - val_accuracy: 0.7964
+Epoch 21/25
+57/57 [==============================] - 1s 24ms/step - loss: 0.6983 - accuracy: 0.6778 - val_loss: 0.7909 - val_accuracy: 0.8240
+Epoch 22/25
+57/57 [==============================] - 1s 24ms/step - loss: 0.6854 - accuracy: 0.6800 - val_loss: 0.7903 - val_accuracy: 0.8155
+Epoch 23/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.6768 - accuracy: 0.6744 - val_loss: 0.7355 - val_accuracy: 0.8165
+Epoch 24/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.6621 - accuracy: 0.6878 - val_loss: 0.7495 - val_accuracy: 0.7943
+Epoch 25/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.6781 - accuracy: 0.6722 - val_loss: 0.8506 - val_accuracy: 0.6628
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 212
+Total sequences in class 'nothing': 1291
+Total sequences in class 'moving_arms': 67
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 46
+Total sequences in class 'nothing': 763
+Total sequences in class 'moving_arms': 47
+Model: "sequential_13"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ time_distributed_169 (Time  (None, 15, 64, 64, 16)    448       
+ Distributed)                                                    
+                                                                 
+ time_distributed_170 (Time  (None, 15, 16, 16, 16)    0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_171 (Time  (None, 15, 16, 16, 16)    0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_172 (Time  (None, 15, 16, 16, 32)    4640      
+ Distributed)                                                    
+                                                                 
+ time_distributed_173 (Time  (None, 15, 4, 4, 32)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_174 (Time  (None, 15, 4, 4, 32)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_175 (Time  (None, 15, 4, 4, 64)      18496     
+ Distributed)                                                    
+                                                                 
+ time_distributed_176 (Time  (None, 15, 2, 2, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_177 (Time  (None, 15, 2, 2, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_178 (Time  (None, 15, 2, 2, 64)      36928     
+ Distributed)                                                    
+                                                                 
+ time_distributed_179 (Time  (None, 15, 1, 1, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_180 (Time  (None, 15, 1, 1, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_181 (Time  (None, 15, 64)            0         
+ Distributed)                                                    
+                                                                 
+ lstm_13 (LSTM)              (None, 32)                12416     
+                                                                 
+ dense_13 (Dense)            (None, 3)                 99        
+                                                                 
+=================================================================
+Total params: 73027 (285.26 KB)
+Trainable params: 73027 (285.26 KB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+Epoch 1/25
+57/57 [==============================] - 7s 64ms/step - loss: 1.0935 - accuracy: 0.3856 - val_loss: 1.1014 - val_accuracy: 0.0783
+Epoch 2/25
+57/57 [==============================] - 1s 22ms/step - loss: 1.0596 - accuracy: 0.4456 - val_loss: 1.1164 - val_accuracy: 0.0561
+Epoch 3/25
+57/57 [==============================] - 1s 22ms/step - loss: 1.0112 - accuracy: 0.5067 - val_loss: 1.1309 - val_accuracy: 0.0549
+Epoch 4/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.9526 - accuracy: 0.5167 - val_loss: 1.1890 - val_accuracy: 0.0421
+Epoch 5/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.9417 - accuracy: 0.5133 - val_loss: 1.2348 - val_accuracy: 0.0572
+Epoch 6/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.8945 - accuracy: 0.5478 - val_loss: 1.2220 - val_accuracy: 0.0572
+Epoch 7/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.8704 - accuracy: 0.5767 - val_loss: 1.1664 - val_accuracy: 0.1554
+Epoch 8/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.8179 - accuracy: 0.6222 - val_loss: 1.1477 - val_accuracy: 0.2465
+Epoch 9/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.7987 - accuracy: 0.6278 - val_loss: 1.1650 - val_accuracy: 0.2395
+Epoch 10/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.7752 - accuracy: 0.6389 - val_loss: 1.1782 - val_accuracy: 0.1764
+Epoch 11/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.7620 - accuracy: 0.6367 - val_loss: 1.1689 - val_accuracy: 0.2605
+Epoch 12/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.7297 - accuracy: 0.6700 - val_loss: 1.2303 - val_accuracy: 0.2558
+Epoch 13/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.7259 - accuracy: 0.6733 - val_loss: 1.2655 - val_accuracy: 0.2138
+Epoch 14/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.6866 - accuracy: 0.7022 - val_loss: 1.1632 - val_accuracy: 0.2991
+Epoch 15/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.6605 - accuracy: 0.7111 - val_loss: 1.4289 - val_accuracy: 0.2348
+Epoch 16/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.6430 - accuracy: 0.7189 - val_loss: 1.4728 - val_accuracy: 0.1717
+Epoch 17/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.6455 - accuracy: 0.7144 - val_loss: 1.4265 - val_accuracy: 0.2629
+Epoch 18/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.6079 - accuracy: 0.7478 - val_loss: 1.2312 - val_accuracy: 0.2909
+Epoch 19/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.6074 - accuracy: 0.7478 - val_loss: 1.3937 - val_accuracy: 0.2734
+Epoch 20/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.5794 - accuracy: 0.7556 - val_loss: 1.4786 - val_accuracy: 0.2629
+Epoch 21/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.5689 - accuracy: 0.7678 - val_loss: 1.3873 - val_accuracy: 0.2780
+Epoch 22/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.5640 - accuracy: 0.7656 - val_loss: 1.4569 - val_accuracy: 0.2699
+Epoch 23/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.5657 - accuracy: 0.7667 - val_loss: 1.3624 - val_accuracy: 0.2804
+Epoch 24/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.5504 - accuracy: 0.7767 - val_loss: 1.5008 - val_accuracy: 0.2710
+Epoch 25/25
+57/57 [==============================] - 1s 21ms/step - loss: 0.5273 - accuracy: 0.7767 - val_loss: 1.3597 - val_accuracy: 0.2827
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 66
+Total sequences in class 'nothing': 1628
+Total sequences in class 'moving_arms': 105
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 192
+Total sequences in class 'nothing': 426
+Total sequences in class 'moving_arms': 9
+Model: "sequential_14"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ time_distributed_182 (Time  (None, 15, 64, 64, 16)    448       
+ Distributed)                                                    
+                                                                 
+ time_distributed_183 (Time  (None, 15, 16, 16, 16)    0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_184 (Time  (None, 15, 16, 16, 16)    0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_185 (Time  (None, 15, 16, 16, 32)    4640      
+ Distributed)                                                    
+                                                                 
+ time_distributed_186 (Time  (None, 15, 4, 4, 32)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_187 (Time  (None, 15, 4, 4, 32)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_188 (Time  (None, 15, 4, 4, 64)      18496     
+ Distributed)                                                    
+                                                                 
+ time_distributed_189 (Time  (None, 15, 2, 2, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_190 (Time  (None, 15, 2, 2, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_191 (Time  (None, 15, 2, 2, 64)      36928     
+ Distributed)                                                    
+                                                                 
+ time_distributed_192 (Time  (None, 15, 1, 1, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_193 (Time  (None, 15, 1, 1, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_194 (Time  (None, 15, 64)            0         
+ Distributed)                                                    
+                                                                 
+ lstm_14 (LSTM)              (None, 32)                12416     
+                                                                 
+ dense_14 (Dense)            (None, 3)                 99        
+                                                                 
+=================================================================
+Total params: 73027 (285.26 KB)
+Trainable params: 73027 (285.26 KB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+Epoch 1/25
+57/57 [==============================] - 7s 70ms/step - loss: 1.1007 - accuracy: 0.3356 - val_loss: 1.0898 - val_accuracy: 0.4609
+Epoch 2/25
+57/57 [==============================] - 1s 20ms/step - loss: 1.0942 - accuracy: 0.3478 - val_loss: 1.1000 - val_accuracy: 0.1260
+Epoch 3/25
+57/57 [==============================] - 1s 20ms/step - loss: 1.0888 - accuracy: 0.3933 - val_loss: 1.1051 - val_accuracy: 0.1946
+Epoch 4/25
+57/57 [==============================] - 1s 20ms/step - loss: 1.0744 - accuracy: 0.4133 - val_loss: 1.1078 - val_accuracy: 0.1866
+Epoch 5/25
+57/57 [==============================] - 1s 20ms/step - loss: 1.0359 - accuracy: 0.4756 - val_loss: 1.1474 - val_accuracy: 0.0766
+Epoch 6/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.9338 - accuracy: 0.5667 - val_loss: 1.2170 - val_accuracy: 0.0925
+Epoch 7/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.8285 - accuracy: 0.6322 - val_loss: 1.2930 - val_accuracy: 0.1116
+Epoch 8/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.7766 - accuracy: 0.6467 - val_loss: 1.4471 - val_accuracy: 0.0845
+Epoch 9/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.7515 - accuracy: 0.6411 - val_loss: 1.4203 - val_accuracy: 0.1308
+Epoch 10/25
+57/57 [==============================] - 1s 21ms/step - loss: 0.7173 - accuracy: 0.6800 - val_loss: 1.4811 - val_accuracy: 0.1499
+Epoch 11/25
+57/57 [==============================] - 1s 21ms/step - loss: 0.7257 - accuracy: 0.6733 - val_loss: 1.4988 - val_accuracy: 0.1356
+Epoch 12/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.6839 - accuracy: 0.7067 - val_loss: 1.5066 - val_accuracy: 0.1834
+Epoch 13/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.6878 - accuracy: 0.6856 - val_loss: 1.5107 - val_accuracy: 0.1404
+Epoch 14/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.6817 - accuracy: 0.7044 - val_loss: 1.5521 - val_accuracy: 0.1691
+Epoch 15/25
+57/57 [==============================] - 1s 21ms/step - loss: 0.6670 - accuracy: 0.7111 - val_loss: 1.6060 - val_accuracy: 0.1627
+Epoch 16/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.6685 - accuracy: 0.7000 - val_loss: 1.6240 - val_accuracy: 0.1595
+Epoch 17/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.6713 - accuracy: 0.6989 - val_loss: 1.5700 - val_accuracy: 0.1531
+Epoch 18/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.6554 - accuracy: 0.7156 - val_loss: 1.6042 - val_accuracy: 0.1563
+Epoch 19/25
+57/57 [==============================] - 1s 21ms/step - loss: 0.6472 - accuracy: 0.7122 - val_loss: 1.6679 - val_accuracy: 0.1786
+Epoch 20/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.6498 - accuracy: 0.7133 - val_loss: 1.6514 - val_accuracy: 0.1451
+Epoch 21/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.6452 - accuracy: 0.7111 - val_loss: 1.6127 - val_accuracy: 0.1547
+Epoch 22/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.6444 - accuracy: 0.7178 - val_loss: 1.6698 - val_accuracy: 0.1404
+Epoch 23/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.6362 - accuracy: 0.7244 - val_loss: 1.6526 - val_accuracy: 0.1499
+Epoch 24/25
+57/57 [==============================] - 1s 21ms/step - loss: 0.6359 - accuracy: 0.7167 - val_loss: 1.6390 - val_accuracy: 0.1579
+Epoch 25/25
+57/57 [==============================] - 1s 21ms/step - loss: 0.6104 - accuracy: 0.7267 - val_loss: 1.7235 - val_accuracy: 0.1340
+Current Hyperparameters: {'conv_filters': (32, 64, 128, 128), 'lstm_units': 64, 'dropout_rate': 0.4, 'learning_rate': 0.001}
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 238
+Total sequences in class 'nothing': 1189
+Total sequences in class 'moving_arms': 56
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 20
+Total sequences in class 'nothing': 865
+Total sequences in class 'moving_arms': 58
+Model: "sequential_15"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ time_distributed_195 (Time  (None, 15, 64, 64, 32)    896       
+ Distributed)                                                    
+                                                                 
+ time_distributed_196 (Time  (None, 15, 16, 16, 32)    0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_197 (Time  (None, 15, 16, 16, 32)    0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_198 (Time  (None, 15, 16, 16, 64)    18496     
+ Distributed)                                                    
+                                                                 
+ time_distributed_199 (Time  (None, 15, 4, 4, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_200 (Time  (None, 15, 4, 4, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_201 (Time  (None, 15, 4, 4, 128)     73856     
+ Distributed)                                                    
+                                                                 
+ time_distributed_202 (Time  (None, 15, 2, 2, 128)     0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_203 (Time  (None, 15, 2, 2, 128)     0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_204 (Time  (None, 15, 2, 2, 128)     147584    
+ Distributed)                                                    
+                                                                 
+ time_distributed_205 (Time  (None, 15, 1, 1, 128)     0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_206 (Time  (None, 15, 1, 1, 128)     0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_207 (Time  (None, 15, 128)           0         
+ Distributed)                                                    
+                                                                 
+ lstm_15 (LSTM)              (None, 64)                49408     
+                                                                 
+ dense_15 (Dense)            (None, 3)                 195       
+                                                                 
+=================================================================
+Total params: 290435 (1.11 MB)
+Trainable params: 290435 (1.11 MB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+Epoch 1/25
+57/57 [==============================] - 8s 72ms/step - loss: 1.0941 - accuracy: 0.4022 - val_loss: 1.0048 - val_accuracy: 0.5705
+Epoch 2/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.7786 - accuracy: 0.6333 - val_loss: 0.9358 - val_accuracy: 0.2259
+Epoch 3/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.7311 - accuracy: 0.6400 - val_loss: 0.9942 - val_accuracy: 0.2036
+Epoch 4/25
+57/57 [==============================] - 2s 27ms/step - loss: 0.6162 - accuracy: 0.6989 - val_loss: 0.5095 - val_accuracy: 0.8908
+Epoch 5/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.5108 - accuracy: 0.7611 - val_loss: 1.1074 - val_accuracy: 0.3160
+Epoch 6/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.5102 - accuracy: 0.7800 - val_loss: 1.0315 - val_accuracy: 0.3139
+Epoch 7/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.4622 - accuracy: 0.7878 - val_loss: 0.5283 - val_accuracy: 0.8091
+Epoch 8/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.4554 - accuracy: 0.7978 - val_loss: 0.5949 - val_accuracy: 0.8908
+Epoch 9/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.4343 - accuracy: 0.8022 - val_loss: 1.1335 - val_accuracy: 0.4199
+Epoch 10/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.3678 - accuracy: 0.8489 - val_loss: 0.9098 - val_accuracy: 0.5790
+Epoch 11/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.3365 - accuracy: 0.8556 - val_loss: 0.7116 - val_accuracy: 0.7222
+Epoch 12/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.3175 - accuracy: 0.8644 - val_loss: 0.9783 - val_accuracy: 0.5175
+Epoch 13/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.3018 - accuracy: 0.8722 - val_loss: 1.1162 - val_accuracy: 0.2683
+Epoch 14/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.2726 - accuracy: 0.8833 - val_loss: 0.5490 - val_accuracy: 0.8324
+Epoch 15/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.2584 - accuracy: 0.9000 - val_loss: 1.2177 - val_accuracy: 0.3139
+Epoch 16/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.2797 - accuracy: 0.8889 - val_loss: 1.0202 - val_accuracy: 0.5027
+Epoch 17/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.2534 - accuracy: 0.9111 - val_loss: 0.8393 - val_accuracy: 0.6501
+Epoch 18/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.2335 - accuracy: 0.9144 - val_loss: 1.1020 - val_accuracy: 0.5726
+Epoch 19/25
+57/57 [==============================] - 2s 27ms/step - loss: 0.2277 - accuracy: 0.9133 - val_loss: 1.0349 - val_accuracy: 0.5239
+Epoch 20/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.2092 - accuracy: 0.9222 - val_loss: 0.8782 - val_accuracy: 0.6013
+Epoch 21/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.1943 - accuracy: 0.9278 - val_loss: 1.0398 - val_accuracy: 0.6501
+Epoch 22/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.2146 - accuracy: 0.9233 - val_loss: 1.0292 - val_accuracy: 0.5398
+Epoch 23/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.2021 - accuracy: 0.9289 - val_loss: 0.8632 - val_accuracy: 0.6458
+Epoch 24/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.1736 - accuracy: 0.9367 - val_loss: 0.9245 - val_accuracy: 0.6119
+Epoch 25/25
+57/57 [==============================] - 2s 27ms/step - loss: 0.1836 - accuracy: 0.9322 - val_loss: 0.8161 - val_accuracy: 0.7105
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 212
+Total sequences in class 'nothing': 1291
+Total sequences in class 'moving_arms': 67
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 46
+Total sequences in class 'nothing': 763
+Total sequences in class 'moving_arms': 47
+Model: "sequential_16"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ time_distributed_208 (Time  (None, 15, 64, 64, 32)    896       
+ Distributed)                                                    
+                                                                 
+ time_distributed_209 (Time  (None, 15, 16, 16, 32)    0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_210 (Time  (None, 15, 16, 16, 32)    0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_211 (Time  (None, 15, 16, 16, 64)    18496     
+ Distributed)                                                    
+                                                                 
+ time_distributed_212 (Time  (None, 15, 4, 4, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_213 (Time  (None, 15, 4, 4, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_214 (Time  (None, 15, 4, 4, 128)     73856     
+ Distributed)                                                    
+                                                                 
+ time_distributed_215 (Time  (None, 15, 2, 2, 128)     0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_216 (Time  (None, 15, 2, 2, 128)     0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_217 (Time  (None, 15, 2, 2, 128)     147584    
+ Distributed)                                                    
+                                                                 
+ time_distributed_218 (Time  (None, 15, 1, 1, 128)     0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_219 (Time  (None, 15, 1, 1, 128)     0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_220 (Time  (None, 15, 128)           0         
+ Distributed)                                                    
+                                                                 
+ lstm_16 (LSTM)              (None, 64)                49408     
+                                                                 
+ dense_16 (Dense)            (None, 3)                 195       
+                                                                 
+=================================================================
+Total params: 290435 (1.11 MB)
+Trainable params: 290435 (1.11 MB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+Epoch 1/25
+57/57 [==============================] - 7s 68ms/step - loss: 1.0320 - accuracy: 0.4633 - val_loss: 0.9746 - val_accuracy: 0.4696
+Epoch 2/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.7297 - accuracy: 0.6411 - val_loss: 1.3058 - val_accuracy: 0.1355
+Epoch 3/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.5916 - accuracy: 0.7356 - val_loss: 1.2632 - val_accuracy: 0.2640
+Epoch 4/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.4912 - accuracy: 0.7978 - val_loss: 1.5137 - val_accuracy: 0.1554
+Epoch 5/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.4805 - accuracy: 0.7989 - val_loss: 1.6215 - val_accuracy: 0.2407
+Epoch 6/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.4531 - accuracy: 0.8044 - val_loss: 1.4701 - val_accuracy: 0.2687
+Epoch 7/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.3834 - accuracy: 0.8467 - val_loss: 2.0312 - val_accuracy: 0.1063
+Epoch 8/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.3002 - accuracy: 0.8833 - val_loss: 1.7440 - val_accuracy: 0.1332
+Epoch 9/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.2724 - accuracy: 0.8967 - val_loss: 2.0835 - val_accuracy: 0.1016
+Epoch 10/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.2811 - accuracy: 0.9000 - val_loss: 1.8673 - val_accuracy: 0.1355
+Epoch 11/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.2692 - accuracy: 0.9078 - val_loss: 2.6254 - val_accuracy: 0.0923
+Epoch 12/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.2429 - accuracy: 0.9089 - val_loss: 2.5076 - val_accuracy: 0.0818
+Epoch 13/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.2095 - accuracy: 0.9233 - val_loss: 2.3358 - val_accuracy: 0.1530
+Epoch 14/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.2435 - accuracy: 0.9033 - val_loss: 2.1247 - val_accuracy: 0.2383
+Epoch 15/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.1853 - accuracy: 0.9322 - val_loss: 1.8781 - val_accuracy: 0.3096
+Epoch 16/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.1807 - accuracy: 0.9411 - val_loss: 2.1891 - val_accuracy: 0.1893
+Epoch 17/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.1719 - accuracy: 0.9400 - val_loss: 1.4628 - val_accuracy: 0.3773
+Epoch 18/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.1938 - accuracy: 0.9344 - val_loss: 2.1122 - val_accuracy: 0.2687
+Epoch 19/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.1718 - accuracy: 0.9356 - val_loss: 2.1784 - val_accuracy: 0.2757
+Epoch 20/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.1425 - accuracy: 0.9544 - val_loss: 2.2807 - val_accuracy: 0.2804
+Epoch 21/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.1918 - accuracy: 0.9267 - val_loss: 1.8002 - val_accuracy: 0.3143
+Epoch 22/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.1253 - accuracy: 0.9544 - val_loss: 2.2056 - val_accuracy: 0.2979
+Epoch 23/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.1506 - accuracy: 0.9467 - val_loss: 2.6200 - val_accuracy: 0.2114
+Epoch 24/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.1709 - accuracy: 0.9467 - val_loss: 1.9590 - val_accuracy: 0.3586
+Epoch 25/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.1285 - accuracy: 0.9522 - val_loss: 2.1596 - val_accuracy: 0.2512
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 66
+Total sequences in class 'nothing': 1628
+Total sequences in class 'moving_arms': 105
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 192
+Total sequences in class 'nothing': 426
+Total sequences in class 'moving_arms': 9
+Model: "sequential_17"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ time_distributed_221 (Time  (None, 15, 64, 64, 32)    896       
+ Distributed)                                                    
+                                                                 
+ time_distributed_222 (Time  (None, 15, 16, 16, 32)    0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_223 (Time  (None, 15, 16, 16, 32)    0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_224 (Time  (None, 15, 16, 16, 64)    18496     
+ Distributed)                                                    
+                                                                 
+ time_distributed_225 (Time  (None, 15, 4, 4, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_226 (Time  (None, 15, 4, 4, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_227 (Time  (None, 15, 4, 4, 128)     73856     
+ Distributed)                                                    
+                                                                 
+ time_distributed_228 (Time  (None, 15, 2, 2, 128)     0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_229 (Time  (None, 15, 2, 2, 128)     0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_230 (Time  (None, 15, 2, 2, 128)     147584    
+ Distributed)                                                    
+                                                                 
+ time_distributed_231 (Time  (None, 15, 1, 1, 128)     0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_232 (Time  (None, 15, 1, 1, 128)     0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_233 (Time  (None, 15, 128)           0         
+ Distributed)                                                    
+                                                                 
+ lstm_17 (LSTM)              (None, 64)                49408     
+                                                                 
+ dense_17 (Dense)            (None, 3)                 195       
+                                                                 
+=================================================================
+Total params: 290435 (1.11 MB)
+Trainable params: 290435 (1.11 MB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+Epoch 1/25
+57/57 [==============================] - 7s 57ms/step - loss: 1.0963 - accuracy: 0.3944 - val_loss: 1.0985 - val_accuracy: 0.2935
+Epoch 2/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.8302 - accuracy: 0.6044 - val_loss: 1.2694 - val_accuracy: 0.3030
+Epoch 3/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.6447 - accuracy: 0.7056 - val_loss: 1.2826 - val_accuracy: 0.4258
+Epoch 4/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.5599 - accuracy: 0.7444 - val_loss: 1.6834 - val_accuracy: 0.3413
+Epoch 5/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.5148 - accuracy: 0.7756 - val_loss: 1.1126 - val_accuracy: 0.4705
+Epoch 6/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.4987 - accuracy: 0.7600 - val_loss: 1.4510 - val_accuracy: 0.3748
+Epoch 7/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.4266 - accuracy: 0.8133 - val_loss: 1.1521 - val_accuracy: 0.5853
+Epoch 8/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.4083 - accuracy: 0.8200 - val_loss: 1.3054 - val_accuracy: 0.5072
+Epoch 9/25
+57/57 [==============================] - 1s 24ms/step - loss: 0.3431 - accuracy: 0.8456 - val_loss: 1.0730 - val_accuracy: 0.6539
+Epoch 10/25
+57/57 [==============================] - 1s 24ms/step - loss: 0.3318 - accuracy: 0.8656 - val_loss: 2.0809 - val_accuracy: 0.4450
+Epoch 11/25
+57/57 [==============================] - 1s 24ms/step - loss: 0.2959 - accuracy: 0.8711 - val_loss: 1.1586 - val_accuracy: 0.6683
+Epoch 12/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.2449 - accuracy: 0.9000 - val_loss: 1.4992 - val_accuracy: 0.4530
+Epoch 13/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.2328 - accuracy: 0.9056 - val_loss: 1.5977 - val_accuracy: 0.6252
+Epoch 14/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.2298 - accuracy: 0.9044 - val_loss: 1.1693 - val_accuracy: 0.5949
+Epoch 15/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.2030 - accuracy: 0.9167 - val_loss: 1.1707 - val_accuracy: 0.4514
+Epoch 16/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.1824 - accuracy: 0.9278 - val_loss: 1.2622 - val_accuracy: 0.6061
+Epoch 17/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.1484 - accuracy: 0.9278 - val_loss: 1.3568 - val_accuracy: 0.5885
+Epoch 18/25
+57/57 [==============================] - 1s 24ms/step - loss: 0.1887 - accuracy: 0.9256 - val_loss: 1.3032 - val_accuracy: 0.5726
+Epoch 19/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.1619 - accuracy: 0.9378 - val_loss: 1.6663 - val_accuracy: 0.4545
+Epoch 20/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.1458 - accuracy: 0.9467 - val_loss: 1.2680 - val_accuracy: 0.5949
+Epoch 21/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.1215 - accuracy: 0.9478 - val_loss: 1.5716 - val_accuracy: 0.5853
+Epoch 22/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.1431 - accuracy: 0.9400 - val_loss: 1.7574 - val_accuracy: 0.5455
+Epoch 23/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.1321 - accuracy: 0.9478 - val_loss: 1.7927 - val_accuracy: 0.5407
+Epoch 24/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.2000 - accuracy: 0.9133 - val_loss: 1.4654 - val_accuracy: 0.4928
+Epoch 25/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.1204 - accuracy: 0.9567 - val_loss: 1.6832 - val_accuracy: 0.5981
+Current Hyperparameters: {'conv_filters': (32, 64, 128, 128), 'lstm_units': 32, 'dropout_rate': 0.4, 'learning_rate': 0.001}
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 238
+Total sequences in class 'nothing': 1189
+Total sequences in class 'moving_arms': 56
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 20
+Total sequences in class 'nothing': 865
+Total sequences in class 'moving_arms': 58
+Model: "sequential_18"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ time_distributed_234 (Time  (None, 15, 64, 64, 32)    896       
+ Distributed)                                                    
+                                                                 
+ time_distributed_235 (Time  (None, 15, 16, 16, 32)    0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_236 (Time  (None, 15, 16, 16, 32)    0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_237 (Time  (None, 15, 16, 16, 64)    18496     
+ Distributed)                                                    
+                                                                 
+ time_distributed_238 (Time  (None, 15, 4, 4, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_239 (Time  (None, 15, 4, 4, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_240 (Time  (None, 15, 4, 4, 128)     73856     
+ Distributed)                                                    
+                                                                 
+ time_distributed_241 (Time  (None, 15, 2, 2, 128)     0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_242 (Time  (None, 15, 2, 2, 128)     0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_243 (Time  (None, 15, 2, 2, 128)     147584    
+ Distributed)                                                    
+                                                                 
+ time_distributed_244 (Time  (None, 15, 1, 1, 128)     0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_245 (Time  (None, 15, 1, 1, 128)     0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_246 (Time  (None, 15, 128)           0         
+ Distributed)                                                    
+                                                                 
+ lstm_18 (LSTM)              (None, 32)                20608     
+                                                                 
+ dense_18 (Dense)            (None, 3)                 99        
+                                                                 
+=================================================================
+Total params: 261539 (1021.64 KB)
+Trainable params: 261539 (1021.64 KB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+Epoch 1/25
+57/57 [==============================] - 9s 73ms/step - loss: 1.0915 - accuracy: 0.3522 - val_loss: 1.0830 - val_accuracy: 0.0954
+Epoch 2/25
+57/57 [==============================] - 2s 28ms/step - loss: 0.8613 - accuracy: 0.5933 - val_loss: 0.8513 - val_accuracy: 0.5048
+Epoch 3/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.6862 - accuracy: 0.6989 - val_loss: 1.0031 - val_accuracy: 0.3521
+Epoch 4/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.5937 - accuracy: 0.7289 - val_loss: 0.8294 - val_accuracy: 0.6575
+Epoch 5/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.5331 - accuracy: 0.7622 - val_loss: 0.5905 - val_accuracy: 0.8780
+Epoch 6/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.5463 - accuracy: 0.7578 - val_loss: 0.7479 - val_accuracy: 0.8049
+Epoch 7/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.4528 - accuracy: 0.8056 - val_loss: 0.8114 - val_accuracy: 0.5779
+Epoch 8/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.4610 - accuracy: 0.7856 - val_loss: 0.7082 - val_accuracy: 0.6182
+Epoch 9/25
+57/57 [==============================] - 2s 27ms/step - loss: 0.4658 - accuracy: 0.7967 - val_loss: 0.5874 - val_accuracy: 0.8526
+Epoch 10/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.3894 - accuracy: 0.8322 - val_loss: 0.8723 - val_accuracy: 0.6055
+Epoch 11/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.3394 - accuracy: 0.8600 - val_loss: 0.8401 - val_accuracy: 0.6214
+Epoch 12/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.3784 - accuracy: 0.8522 - val_loss: 0.8994 - val_accuracy: 0.6119
+Epoch 13/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.3577 - accuracy: 0.8489 - val_loss: 1.0848 - val_accuracy: 0.5164
+Epoch 14/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.3673 - accuracy: 0.8578 - val_loss: 0.6874 - val_accuracy: 0.7434
+Epoch 15/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.2750 - accuracy: 0.8978 - val_loss: 0.7583 - val_accuracy: 0.6935
+Epoch 16/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.2653 - accuracy: 0.9056 - val_loss: 0.8051 - val_accuracy: 0.7063
+Epoch 17/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.2592 - accuracy: 0.9022 - val_loss: 0.7583 - val_accuracy: 0.7158
+Epoch 18/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.2547 - accuracy: 0.9111 - val_loss: 0.7670 - val_accuracy: 0.7349
+Epoch 19/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.2332 - accuracy: 0.9156 - val_loss: 0.7011 - val_accuracy: 0.7444
+Epoch 20/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.2355 - accuracy: 0.9133 - val_loss: 0.5809 - val_accuracy: 0.8091
+Epoch 21/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.2548 - accuracy: 0.9067 - val_loss: 0.7261 - val_accuracy: 0.7275
+Epoch 22/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.2216 - accuracy: 0.9133 - val_loss: 0.7875 - val_accuracy: 0.6903
+Epoch 23/25
+57/57 [==============================] - 2s 27ms/step - loss: 0.2323 - accuracy: 0.9111 - val_loss: 0.7921 - val_accuracy: 0.7169
+Epoch 24/25
+57/57 [==============================] - 2s 29ms/step - loss: 0.2036 - accuracy: 0.9267 - val_loss: 0.7966 - val_accuracy: 0.7391
+Epoch 25/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.2114 - accuracy: 0.9200 - val_loss: 0.5887 - val_accuracy: 0.8240
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 212
+Total sequences in class 'nothing': 1291
+Total sequences in class 'moving_arms': 67
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 46
+Total sequences in class 'nothing': 763
+Total sequences in class 'moving_arms': 47
+Model: "sequential_19"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ time_distributed_247 (Time  (None, 15, 64, 64, 32)    896       
+ Distributed)                                                    
+                                                                 
+ time_distributed_248 (Time  (None, 15, 16, 16, 32)    0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_249 (Time  (None, 15, 16, 16, 32)    0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_250 (Time  (None, 15, 16, 16, 64)    18496     
+ Distributed)                                                    
+                                                                 
+ time_distributed_251 (Time  (None, 15, 4, 4, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_252 (Time  (None, 15, 4, 4, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_253 (Time  (None, 15, 4, 4, 128)     73856     
+ Distributed)                                                    
+                                                                 
+ time_distributed_254 (Time  (None, 15, 2, 2, 128)     0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_255 (Time  (None, 15, 2, 2, 128)     0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_256 (Time  (None, 15, 2, 2, 128)     147584    
+ Distributed)                                                    
+                                                                 
+ time_distributed_257 (Time  (None, 15, 1, 1, 128)     0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_258 (Time  (None, 15, 1, 1, 128)     0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_259 (Time  (None, 15, 128)           0         
+ Distributed)                                                    
+                                                                 
+ lstm_19 (LSTM)              (None, 32)                20608     
+                                                                 
+ dense_19 (Dense)            (None, 3)                 99        
+                                                                 
+=================================================================
+Total params: 261539 (1021.64 KB)
+Trainable params: 261539 (1021.64 KB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+Epoch 1/25
+57/57 [==============================] - 7s 68ms/step - loss: 0.9968 - accuracy: 0.4711 - val_loss: 1.1805 - val_accuracy: 0.0724
+Epoch 2/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.7568 - accuracy: 0.6500 - val_loss: 1.3337 - val_accuracy: 0.1472
+Epoch 3/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.6297 - accuracy: 0.7200 - val_loss: 1.4785 - val_accuracy: 0.0911
+Epoch 4/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.5796 - accuracy: 0.7389 - val_loss: 1.5025 - val_accuracy: 0.1285
+Epoch 5/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.5255 - accuracy: 0.7756 - val_loss: 1.4476 - val_accuracy: 0.2535
+Epoch 6/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.5720 - accuracy: 0.7433 - val_loss: 1.0614 - val_accuracy: 0.3843
+Epoch 7/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.4464 - accuracy: 0.8156 - val_loss: 1.5398 - val_accuracy: 0.2126
+Epoch 8/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.4078 - accuracy: 0.8333 - val_loss: 1.1959 - val_accuracy: 0.3657
+Epoch 9/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.3815 - accuracy: 0.8356 - val_loss: 1.6079 - val_accuracy: 0.2640
+Epoch 10/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.3382 - accuracy: 0.8700 - val_loss: 2.0441 - val_accuracy: 0.2512
+Epoch 11/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.3410 - accuracy: 0.8567 - val_loss: 1.9295 - val_accuracy: 0.1320
+Epoch 12/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.3193 - accuracy: 0.8789 - val_loss: 1.2662 - val_accuracy: 0.5012
+Epoch 13/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.2602 - accuracy: 0.8989 - val_loss: 1.7192 - val_accuracy: 0.3189
+Epoch 14/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.2852 - accuracy: 0.8922 - val_loss: 2.1805 - val_accuracy: 0.1367
+Epoch 15/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.2541 - accuracy: 0.9067 - val_loss: 2.0808 - val_accuracy: 0.2114
+Epoch 16/25
+57/57 [==============================] - 1s 24ms/step - loss: 0.2633 - accuracy: 0.9067 - val_loss: 1.7899 - val_accuracy: 0.2699
+Epoch 17/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.2861 - accuracy: 0.8867 - val_loss: 2.6126 - val_accuracy: 0.1332
+Epoch 18/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.2403 - accuracy: 0.9156 - val_loss: 1.7265 - val_accuracy: 0.3119
+Epoch 19/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.2057 - accuracy: 0.9322 - val_loss: 2.6496 - val_accuracy: 0.2068
+Epoch 20/25
+57/57 [==============================] - 1s 26ms/step - loss: 0.2790 - accuracy: 0.8922 - val_loss: 3.1471 - val_accuracy: 0.1215
+Epoch 21/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.2070 - accuracy: 0.9256 - val_loss: 2.8635 - val_accuracy: 0.1741
+Epoch 22/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.1812 - accuracy: 0.9311 - val_loss: 1.8528 - val_accuracy: 0.3575
+Epoch 23/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.1628 - accuracy: 0.9444 - val_loss: 2.8612 - val_accuracy: 0.2547
+Epoch 24/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.1606 - accuracy: 0.9433 - val_loss: 1.5047 - val_accuracy: 0.4918
+Epoch 25/25
+57/57 [==============================] - 1s 25ms/step - loss: 0.1968 - accuracy: 0.9278 - val_loss: 2.5057 - val_accuracy: 0.3248
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 66
+Total sequences in class 'nothing': 1628
+Total sequences in class 'moving_arms': 105
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 192
+Total sequences in class 'nothing': 426
+Total sequences in class 'moving_arms': 9
+Model: "sequential_20"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ time_distributed_260 (Time  (None, 15, 64, 64, 32)    896       
+ Distributed)                                                    
+                                                                 
+ time_distributed_261 (Time  (None, 15, 16, 16, 32)    0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_262 (Time  (None, 15, 16, 16, 32)    0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_263 (Time  (None, 15, 16, 16, 64)    18496     
+ Distributed)                                                    
+                                                                 
+ time_distributed_264 (Time  (None, 15, 4, 4, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_265 (Time  (None, 15, 4, 4, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_266 (Time  (None, 15, 4, 4, 128)     73856     
+ Distributed)                                                    
+                                                                 
+ time_distributed_267 (Time  (None, 15, 2, 2, 128)     0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_268 (Time  (None, 15, 2, 2, 128)     0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_269 (Time  (None, 15, 2, 2, 128)     147584    
+ Distributed)                                                    
+                                                                 
+ time_distributed_270 (Time  (None, 15, 1, 1, 128)     0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_271 (Time  (None, 15, 1, 1, 128)     0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_272 (Time  (None, 15, 128)           0         
+ Distributed)                                                    
+                                                                 
+ lstm_20 (LSTM)              (None, 32)                20608     
+                                                                 
+ dense_20 (Dense)            (None, 3)                 99        
+                                                                 
+=================================================================
+Total params: 261539 (1021.64 KB)
+Trainable params: 261539 (1021.64 KB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+Epoch 1/25
+57/57 [==============================] - 7s 57ms/step - loss: 1.0985 - accuracy: 0.3633 - val_loss: 1.1600 - val_accuracy: 0.0144
+Epoch 2/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.8883 - accuracy: 0.5833 - val_loss: 1.3674 - val_accuracy: 0.2329
+Epoch 3/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.7056 - accuracy: 0.6767 - val_loss: 1.4161 - val_accuracy: 0.3110
+Epoch 4/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.5937 - accuracy: 0.7356 - val_loss: 1.8832 - val_accuracy: 0.2632
+Epoch 5/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.5202 - accuracy: 0.7622 - val_loss: 1.9014 - val_accuracy: 0.2568
+Epoch 6/25
+57/57 [==============================] - 1s 24ms/step - loss: 0.4289 - accuracy: 0.8156 - val_loss: 1.2818 - val_accuracy: 0.5518
+Epoch 7/25
+57/57 [==============================] - 1s 24ms/step - loss: 0.4090 - accuracy: 0.8178 - val_loss: 2.8075 - val_accuracy: 0.2249
+Epoch 8/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.3760 - accuracy: 0.8333 - val_loss: 1.3545 - val_accuracy: 0.4609
+Epoch 9/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.3038 - accuracy: 0.8678 - val_loss: 2.0352 - val_accuracy: 0.3780
+Epoch 10/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.2690 - accuracy: 0.8822 - val_loss: 2.0991 - val_accuracy: 0.3604
+Epoch 11/25
+57/57 [==============================] - 1s 24ms/step - loss: 0.2533 - accuracy: 0.8911 - val_loss: 1.7640 - val_accuracy: 0.4370
+Epoch 12/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.2664 - accuracy: 0.8800 - val_loss: 2.6911 - val_accuracy: 0.3110
+Epoch 13/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.2626 - accuracy: 0.8822 - val_loss: 2.4770 - val_accuracy: 0.2982
+Epoch 14/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.2215 - accuracy: 0.9089 - val_loss: 2.1235 - val_accuracy: 0.4019
+Epoch 15/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.2227 - accuracy: 0.9033 - val_loss: 2.0295 - val_accuracy: 0.4099
+Epoch 16/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.1903 - accuracy: 0.9167 - val_loss: 2.3333 - val_accuracy: 0.4338
+Epoch 17/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.1710 - accuracy: 0.9289 - val_loss: 1.9266 - val_accuracy: 0.4912
+Epoch 18/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.1650 - accuracy: 0.9300 - val_loss: 2.0345 - val_accuracy: 0.3684
+Epoch 19/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.1721 - accuracy: 0.9244 - val_loss: 1.6361 - val_accuracy: 0.5853
+Epoch 20/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.1558 - accuracy: 0.9400 - val_loss: 2.6890 - val_accuracy: 0.3285
+Epoch 21/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.1444 - accuracy: 0.9422 - val_loss: 1.9546 - val_accuracy: 0.4545
+Epoch 22/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.1211 - accuracy: 0.9556 - val_loss: 2.1193 - val_accuracy: 0.4179
+Epoch 23/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.1712 - accuracy: 0.9367 - val_loss: 2.5326 - val_accuracy: 0.3860
+Epoch 24/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.1606 - accuracy: 0.9333 - val_loss: 1.9545 - val_accuracy: 0.4211
+Epoch 25/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.1285 - accuracy: 0.9522 - val_loss: 2.3320 - val_accuracy: 0.3828
+Current Hyperparameters: {'conv_filters': (16, 32, 64, 64), 'lstm_units': 64, 'dropout_rate': 0.4, 'learning_rate': 0.0001}
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 238
+Total sequences in class 'nothing': 1189
+Total sequences in class 'moving_arms': 56
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 20
+Total sequences in class 'nothing': 865
+Total sequences in class 'moving_arms': 58
+Model: "sequential_21"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ time_distributed_273 (Time  (None, 15, 64, 64, 16)    448       
+ Distributed)                                                    
+                                                                 
+ time_distributed_274 (Time  (None, 15, 16, 16, 16)    0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_275 (Time  (None, 15, 16, 16, 16)    0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_276 (Time  (None, 15, 16, 16, 32)    4640      
+ Distributed)                                                    
+                                                                 
+ time_distributed_277 (Time  (None, 15, 4, 4, 32)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_278 (Time  (None, 15, 4, 4, 32)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_279 (Time  (None, 15, 4, 4, 64)      18496     
+ Distributed)                                                    
+                                                                 
+ time_distributed_280 (Time  (None, 15, 2, 2, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_281 (Time  (None, 15, 2, 2, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_282 (Time  (None, 15, 2, 2, 64)      36928     
+ Distributed)                                                    
+                                                                 
+ time_distributed_283 (Time  (None, 15, 1, 1, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_284 (Time  (None, 15, 1, 1, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_285 (Time  (None, 15, 64)            0         
+ Distributed)                                                    
+                                                                 
+ lstm_21 (LSTM)              (None, 64)                33024     
+                                                                 
+ dense_21 (Dense)            (None, 3)                 195       
+                                                                 
+=================================================================
+Total params: 93731 (366.14 KB)
+Trainable params: 93731 (366.14 KB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+Epoch 1/25
+57/57 [==============================] - 7s 69ms/step - loss: 1.1050 - accuracy: 0.3422 - val_loss: 1.0586 - val_accuracy: 0.9152
+Epoch 2/25
+57/57 [==============================] - 1s 23ms/step - loss: 1.0916 - accuracy: 0.3567 - val_loss: 1.0843 - val_accuracy: 0.2906
+Epoch 3/25
+57/57 [==============================] - 1s 22ms/step - loss: 1.0684 - accuracy: 0.4267 - val_loss: 1.0915 - val_accuracy: 0.0636
+Epoch 4/25
+57/57 [==============================] - 1s 23ms/step - loss: 1.0300 - accuracy: 0.4711 - val_loss: 1.0731 - val_accuracy: 0.0848
+Epoch 5/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.9839 - accuracy: 0.5022 - val_loss: 1.0877 - val_accuracy: 0.0976
+Epoch 6/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.9483 - accuracy: 0.5356 - val_loss: 1.0964 - val_accuracy: 0.1145
+Epoch 7/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.8839 - accuracy: 0.5900 - val_loss: 1.1708 - val_accuracy: 0.1018
+Epoch 8/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.8261 - accuracy: 0.6022 - val_loss: 1.0451 - val_accuracy: 0.3446
+Epoch 9/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.7972 - accuracy: 0.5878 - val_loss: 1.0859 - val_accuracy: 0.2937
+Epoch 10/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.7721 - accuracy: 0.6133 - val_loss: 1.1137 - val_accuracy: 0.2534
+Epoch 11/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.7587 - accuracy: 0.6367 - val_loss: 0.8643 - val_accuracy: 0.6988
+Epoch 12/25
+57/57 [==============================] - 1s 24ms/step - loss: 0.7415 - accuracy: 0.6256 - val_loss: 1.0166 - val_accuracy: 0.3298
+Epoch 13/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.7312 - accuracy: 0.6411 - val_loss: 1.0317 - val_accuracy: 0.3213
+Epoch 14/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.7295 - accuracy: 0.6400 - val_loss: 0.9767 - val_accuracy: 0.4146
+Epoch 15/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.7107 - accuracy: 0.6567 - val_loss: 0.9283 - val_accuracy: 0.4867
+Epoch 16/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.7072 - accuracy: 0.6800 - val_loss: 0.9165 - val_accuracy: 0.5398
+Epoch 17/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.6810 - accuracy: 0.6800 - val_loss: 0.9742 - val_accuracy: 0.4146
+Epoch 18/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.6849 - accuracy: 0.6811 - val_loss: 0.8602 - val_accuracy: 0.6267
+Epoch 19/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.6689 - accuracy: 0.6733 - val_loss: 0.8832 - val_accuracy: 0.5567
+Epoch 20/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.6672 - accuracy: 0.6933 - val_loss: 0.8844 - val_accuracy: 0.5642
+Epoch 21/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.6726 - accuracy: 0.6789 - val_loss: 0.9292 - val_accuracy: 0.4740
+Epoch 22/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.6507 - accuracy: 0.6978 - val_loss: 0.8740 - val_accuracy: 0.5801
+Epoch 23/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.6492 - accuracy: 0.6789 - val_loss: 0.9019 - val_accuracy: 0.5143
+Epoch 24/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.6314 - accuracy: 0.6978 - val_loss: 0.8159 - val_accuracy: 0.6660
+Epoch 25/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.6194 - accuracy: 0.7122 - val_loss: 0.8268 - val_accuracy: 0.6543
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 212
+Total sequences in class 'nothing': 1291
+Total sequences in class 'moving_arms': 67
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 46
+Total sequences in class 'nothing': 763
+Total sequences in class 'moving_arms': 47
+Model: "sequential_22"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ time_distributed_286 (Time  (None, 15, 64, 64, 16)    448       
+ Distributed)                                                    
+                                                                 
+ time_distributed_287 (Time  (None, 15, 16, 16, 16)    0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_288 (Time  (None, 15, 16, 16, 16)    0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_289 (Time  (None, 15, 16, 16, 32)    4640      
+ Distributed)                                                    
+                                                                 
+ time_distributed_290 (Time  (None, 15, 4, 4, 32)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_291 (Time  (None, 15, 4, 4, 32)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_292 (Time  (None, 15, 4, 4, 64)      18496     
+ Distributed)                                                    
+                                                                 
+ time_distributed_293 (Time  (None, 15, 2, 2, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_294 (Time  (None, 15, 2, 2, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_295 (Time  (None, 15, 2, 2, 64)      36928     
+ Distributed)                                                    
+                                                                 
+ time_distributed_296 (Time  (None, 15, 1, 1, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_297 (Time  (None, 15, 1, 1, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_298 (Time  (None, 15, 64)            0         
+ Distributed)                                                    
+                                                                 
+ lstm_22 (LSTM)              (None, 64)                33024     
+                                                                 
+ dense_22 (Dense)            (None, 3)                 195       
+                                                                 
+=================================================================
+Total params: 93731 (366.14 KB)
+Trainable params: 93731 (366.14 KB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+Epoch 1/25
+57/57 [==============================] - 8s 64ms/step - loss: 1.0911 - accuracy: 0.3978 - val_loss: 1.0625 - val_accuracy: 0.8633
+Epoch 2/25
+57/57 [==============================] - 1s 22ms/step - loss: 1.0632 - accuracy: 0.4300 - val_loss: 1.0389 - val_accuracy: 0.8680
+Epoch 3/25
+57/57 [==============================] - 1s 23ms/step - loss: 1.0162 - accuracy: 0.4844 - val_loss: 1.0261 - val_accuracy: 0.8061
+Epoch 4/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.9700 - accuracy: 0.5067 - val_loss: 0.9789 - val_accuracy: 0.8224
+Epoch 5/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.9409 - accuracy: 0.5400 - val_loss: 1.0756 - val_accuracy: 0.2336
+Epoch 6/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.9230 - accuracy: 0.5256 - val_loss: 1.0444 - val_accuracy: 0.4731
+Epoch 7/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.9097 - accuracy: 0.5456 - val_loss: 1.0085 - val_accuracy: 0.6086
+Epoch 8/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.8841 - accuracy: 0.5522 - val_loss: 1.0844 - val_accuracy: 0.2091
+Epoch 9/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.8544 - accuracy: 0.5767 - val_loss: 1.1130 - val_accuracy: 0.2734
+Epoch 10/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.8407 - accuracy: 0.5878 - val_loss: 1.1185 - val_accuracy: 0.2687
+Epoch 11/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.7966 - accuracy: 0.6089 - val_loss: 1.1075 - val_accuracy: 0.2675
+Epoch 12/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.8122 - accuracy: 0.5956 - val_loss: 1.1836 - val_accuracy: 0.2173
+Epoch 13/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.7660 - accuracy: 0.6367 - val_loss: 1.1621 - val_accuracy: 0.2488
+Epoch 14/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.7449 - accuracy: 0.6311 - val_loss: 1.2757 - val_accuracy: 0.1600
+Epoch 15/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.7625 - accuracy: 0.6233 - val_loss: 1.2736 - val_accuracy: 0.1402
+Epoch 16/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.7257 - accuracy: 0.6444 - val_loss: 1.3636 - val_accuracy: 0.0643
+Epoch 17/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.7125 - accuracy: 0.6644 - val_loss: 1.3048 - val_accuracy: 0.1016
+Epoch 18/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.7054 - accuracy: 0.6656 - val_loss: 1.1445 - val_accuracy: 0.2675
+Epoch 19/25
+57/57 [==============================] - 1s 24ms/step - loss: 0.7007 - accuracy: 0.6744 - val_loss: 1.2838 - val_accuracy: 0.1519
+Epoch 20/25
+57/57 [==============================] - 1s 23ms/step - loss: 0.6940 - accuracy: 0.6733 - val_loss: 1.1749 - val_accuracy: 0.2185
+Epoch 21/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.6563 - accuracy: 0.7033 - val_loss: 1.2431 - val_accuracy: 0.1857
+Epoch 22/25
+57/57 [==============================] - 1s 21ms/step - loss: 0.6351 - accuracy: 0.7278 - val_loss: 1.3262 - val_accuracy: 0.1811
+Epoch 23/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.6407 - accuracy: 0.7100 - val_loss: 1.3140 - val_accuracy: 0.2138
+Epoch 24/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.6156 - accuracy: 0.7211 - val_loss: 1.2943 - val_accuracy: 0.2348
+Epoch 25/25
+57/57 [==============================] - 1s 21ms/step - loss: 0.6063 - accuracy: 0.7289 - val_loss: 1.3904 - val_accuracy: 0.2231
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 66
+Total sequences in class 'nothing': 1628
+Total sequences in class 'moving_arms': 105
+CLASSES_LIST: ['hand_shaking', 'nothing', 'moving_arms']
+Label Mapping: {'hand_shaking': 0, 'nothing': 1, 'moving_arms': 2}
+Total sequences in class 'hand_shaking': 192
+Total sequences in class 'nothing': 426
+Total sequences in class 'moving_arms': 9
+Model: "sequential_23"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ time_distributed_299 (Time  (None, 15, 64, 64, 16)    448       
+ Distributed)                                                    
+                                                                 
+ time_distributed_300 (Time  (None, 15, 16, 16, 16)    0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_301 (Time  (None, 15, 16, 16, 16)    0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_302 (Time  (None, 15, 16, 16, 32)    4640      
+ Distributed)                                                    
+                                                                 
+ time_distributed_303 (Time  (None, 15, 4, 4, 32)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_304 (Time  (None, 15, 4, 4, 32)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_305 (Time  (None, 15, 4, 4, 64)      18496     
+ Distributed)                                                    
+                                                                 
+ time_distributed_306 (Time  (None, 15, 2, 2, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_307 (Time  (None, 15, 2, 2, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_308 (Time  (None, 15, 2, 2, 64)      36928     
+ Distributed)                                                    
+                                                                 
+ time_distributed_309 (Time  (None, 15, 1, 1, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_310 (Time  (None, 15, 1, 1, 64)      0         
+ Distributed)                                                    
+                                                                 
+ time_distributed_311 (Time  (None, 15, 64)            0         
+ Distributed)                                                    
+                                                                 
+ lstm_23 (LSTM)              (None, 64)                33024     
+                                                                 
+ dense_23 (Dense)            (None, 3)                 195       
+                                                                 
+=================================================================
+Total params: 93731 (366.14 KB)
+Trainable params: 93731 (366.14 KB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+Epoch 1/25
+57/57 [==============================] - 7s 54ms/step - loss: 1.1029 - accuracy: 0.3289 - val_loss: 1.0829 - val_accuracy: 0.6459
+Epoch 2/25
+57/57 [==============================] - 1s 20ms/step - loss: 1.0917 - accuracy: 0.3656 - val_loss: 1.0923 - val_accuracy: 0.4067
+Epoch 3/25
+57/57 [==============================] - 1s 21ms/step - loss: 1.0803 - accuracy: 0.4000 - val_loss: 1.0842 - val_accuracy: 0.4976
+Epoch 4/25
+57/57 [==============================] - 1s 20ms/step - loss: 1.0617 - accuracy: 0.4278 - val_loss: 1.0848 - val_accuracy: 0.4306
+Epoch 5/25
+57/57 [==============================] - 1s 21ms/step - loss: 1.0309 - accuracy: 0.4856 - val_loss: 1.1460 - val_accuracy: 0.2759
+Epoch 6/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.9668 - accuracy: 0.5244 - val_loss: 1.1338 - val_accuracy: 0.1722
+Epoch 7/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.8870 - accuracy: 0.5811 - val_loss: 1.1828 - val_accuracy: 0.3285
+Epoch 8/25
+57/57 [==============================] - 1s 21ms/step - loss: 0.8366 - accuracy: 0.6033 - val_loss: 1.2656 - val_accuracy: 0.3333
+Epoch 9/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.7841 - accuracy: 0.6200 - val_loss: 1.3434 - val_accuracy: 0.3238
+Epoch 10/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.7594 - accuracy: 0.6289 - val_loss: 1.2716 - val_accuracy: 0.3429
+Epoch 11/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.7494 - accuracy: 0.6489 - val_loss: 1.2708 - val_accuracy: 0.4211
+Epoch 12/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.7228 - accuracy: 0.6567 - val_loss: 1.4316 - val_accuracy: 0.3493
+Epoch 13/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.7196 - accuracy: 0.6589 - val_loss: 1.3407 - val_accuracy: 0.2711
+Epoch 14/25
+57/57 [==============================] - 1s 21ms/step - loss: 0.7033 - accuracy: 0.6756 - val_loss: 1.3014 - val_accuracy: 0.3030
+Epoch 15/25
+57/57 [==============================] - 1s 22ms/step - loss: 0.7110 - accuracy: 0.6578 - val_loss: 1.2207 - val_accuracy: 0.3174
+Epoch 16/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.6850 - accuracy: 0.6778 - val_loss: 1.2679 - val_accuracy: 0.2935
+Epoch 17/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.6722 - accuracy: 0.6967 - val_loss: 1.3087 - val_accuracy: 0.2951
+Epoch 18/25
+57/57 [==============================] - 1s 21ms/step - loss: 0.6625 - accuracy: 0.7022 - val_loss: 1.3130 - val_accuracy: 0.2951
+Epoch 19/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.6548 - accuracy: 0.7100 - val_loss: 1.3503 - val_accuracy: 0.2839
+Epoch 20/25
+57/57 [==============================] - 1s 21ms/step - loss: 0.6593 - accuracy: 0.6967 - val_loss: 1.3515 - val_accuracy: 0.3046
+Epoch 21/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.6349 - accuracy: 0.7067 - val_loss: 1.4415 - val_accuracy: 0.3381
+Epoch 22/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.6531 - accuracy: 0.6944 - val_loss: 1.2927 - val_accuracy: 0.2807
+Epoch 23/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.6376 - accuracy: 0.7100 - val_loss: 1.3472 - val_accuracy: 0.2711
+Epoch 24/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.6326 - accuracy: 0.7078 - val_loss: 1.2767 - val_accuracy: 0.2727
+Epoch 25/25
+57/57 [==============================] - 1s 20ms/step - loss: 0.6223 - accuracy: 0.7200 - val_loss: 1.2584 - val_accuracy: 0.2711
+Best Hyperparameters: {'conv_filters': (32, 64, 128, 128), 'lstm_units': 32, 'dropout_rate': 0.4, 'learning_rate': 0.001}
+Best Validation Set Accuracy: 0.580352654059728
+Best Validation Set Loss: 1.030356725056966
+Best Number of Epochs: 6

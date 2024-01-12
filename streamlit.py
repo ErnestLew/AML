@@ -3,6 +3,7 @@ import cv2
 import numpy as np
 import streamlit as st
 import tempfile
+from collections import Counter
 
 # Constants
 IMAGE_HEIGHT, IMAGE_WIDTH = 64, 64
@@ -10,7 +11,7 @@ SEQUENCE_LENGTH = 15
 CLASSES_LIST = ['moving_arms', 'hand_shaking', 'nothing']
 
 # Load the trained model
-model = load_model('LRCN.h5')
+model = load_model('ResNet_LRCN.h5')
 
 def process_video(uploaded_file, sequence_length=SEQUENCE_LENGTH, image_height=IMAGE_HEIGHT, image_width=IMAGE_WIDTH):
     # Save the uploaded file to a temporary file
@@ -49,15 +50,21 @@ def process_and_predict(model, uploaded_file, sequence_length=SEQUENCE_LENGTH):
         results.append(f"Second {second}: Predicted action - {predicted_class}")
         second += 1
 
-    unique, counts = np.unique(predictions, return_counts=True)
-    prediction_counts = dict(zip(unique, counts))
-    prediction_counts.pop(2, None)  # Remove 'nothing' class
+    # Count occurrences of each prediction
+    prediction_counts = Counter(predictions)
 
-    if prediction_counts:
-        most_common_class_index = max(prediction_counts, key=prediction_counts.get)
-        final_prediction = CLASSES_LIST[most_common_class_index]
+    # Indices for 'nothing', 'moving arm', and 'hand shaking' classes
+    index_nothing = CLASSES_LIST.index('nothing')
+    index_moving_arm = CLASSES_LIST.index('moving arm')
+    index_hand_shaking = CLASSES_LIST.index('hand shaking')
+
+    # Apply your rules for final prediction
+    if all(pred == index_nothing for pred in predictions):
+        final_prediction = 'moving arm'
+    elif prediction_counts.get(index_hand_shaking, 0) > prediction_counts.get(index_moving_arm, 0):
+        final_prediction = 'hand shaking'
     else:
-        final_prediction = "This video has no specified actions"
+        final_prediction = 'moving arm'
 
     return final_prediction, results
 
