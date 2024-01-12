@@ -7,6 +7,10 @@ investigate the possibility of classifying the different flipping
 characteristics based on the Self-Stimulatory Behaviours in the Wild for 
 Autism Diagnosis Dataset (SSBD)
 
+# Notebooks
+
+The python notebooks that we trained are in the .\notebooks folder
+
 # Installation require packages
 
 ```

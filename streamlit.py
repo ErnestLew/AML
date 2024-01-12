@@ -50,21 +50,15 @@ def process_and_predict(model, uploaded_file, sequence_length=SEQUENCE_LENGTH):
         results.append(f"Second {second}: Predicted action - {predicted_class}")
         second += 1
 
-    # Count occurrences of each prediction
-    prediction_counts = Counter(predictions)
+    unique, counts = np.unique(predictions, return_counts=True)
+    prediction_counts = dict(zip(unique, counts))
+    prediction_counts.pop(2, None)  # Remove 'nothing' class
 
-    # Indices for 'nothing', 'moving arm', and 'hand shaking' classes
-    index_nothing = CLASSES_LIST.index('nothing')
-    index_moving_arm = CLASSES_LIST.index('moving arm')
-    index_hand_shaking = CLASSES_LIST.index('hand shaking')
-
-    # Apply your rules for final prediction
-    if all(pred == index_nothing for pred in predictions):
-        final_prediction = 'moving arm'
-    elif prediction_counts.get(index_hand_shaking, 0) > prediction_counts.get(index_moving_arm, 0):
-        final_prediction = 'hand shaking'
+    if prediction_counts:
+        most_common_class_index = max(prediction_counts, key=prediction_counts.get)
+        final_prediction = CLASSES_LIST[most_common_class_index]
     else:
-        final_prediction = 'moving arm'
+        final_prediction = "This video has no specified actions"
 
     return final_prediction, results
 
